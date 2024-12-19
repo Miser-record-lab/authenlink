@@ -8,7 +8,7 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
 
         <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6">
-          Nos Solutions
+          Nos <span className="text-purple">Solutions</span>
         </h2>
         {/* Grille de 4 cartes */}
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-10">
@@ -17,10 +17,10 @@ const Features = () => {
             <CardContainer className="relative w-full">
               <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black-100 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Infrastructures Open-Source
+                  Infrastructures <span className="text-purple">Open-Source</span>
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Utilisez des outils open-source pour automatiser vos tâches et collecter des données avec des solutions robustes.
+                  Utilisez des outils open-source pour automatiser vos tâches et collecter des données avec des solutions robustes et personnalisé mise en place rapidement.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
                   <Image
@@ -44,10 +44,10 @@ const Features = () => {
             <CardContainer className="relative w-full">
               <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black-100 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Analyse de Données
+                <span className="text-purple">Réduction</span> des coûts 
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Visualisez vos données et prenez des décisions éclairées avec Metabase.
+                  Réduire les coûts opérationnels en automatisant les tâches répétitives et en optimisant l&apos;allocation des ressources grace à un tracking data performant.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
                   <Image
@@ -66,10 +66,10 @@ const Features = () => {
             <CardContainer className="relative w-full flex flex-wrap">
               <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black-100 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Marketing Automatisé
+                  Croissance <span className="text-purple">Accélérée</span>
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Boostez votre marketing grâce à l&apos;automatisation avec Mautic.
+                  Faites évoluer vos opérations en toute transparence grâce à l&apos;automatisation de l&apos;IA qui peut s&apos;adapter aux besoins croissants de votre entreprise.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
                   <Image
@@ -89,10 +89,10 @@ const Features = () => {
             <CardContainer className="relative w-full">
               <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black-100 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Assistant Virtuel
+                  Solutions <span className="text-purple">Personnalisées</span>
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Optimisez la communication avec votre entreprise et vos clients grâce à des workflows automatisés.
+                  Nous construisons des solutions sur mesure en fonction des besoins et des objectifs spécifiques de votre entreprise.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
                   <Image

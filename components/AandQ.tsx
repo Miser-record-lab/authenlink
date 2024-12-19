@@ -50,7 +50,7 @@ const AppointmentAndQuestions = () => {
     <section className="w-full py-20 bg-black-100 text-white" id="rendez-vous">
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
         <h2 className="text-center text-3xl sm:text-4xl font-bold mb-20">
-          Prendre rendez-vous
+          Prendre <span className="text-purple">Rendez-vous</span>
         </h2>
 
         <div className="flex flex-wrap justify-center  items-center gap-8">

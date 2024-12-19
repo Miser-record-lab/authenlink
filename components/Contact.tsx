@@ -91,7 +91,7 @@ const Contact = () => {
   return (
     <section className="w-full pt-40" id="contact">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-center text-4xl font-bold mb-8">Nous Contacter</h2>
+        <h2 className="text-center text-4xl font-bold mb-8">Nous <span className="text-purple">Contacter</span></h2>
         <form onSubmit={handleSubmit} className="space-y-6 bg-black-100 p-8 rounded-lg shadow-lg ">
           <div className="flex space-x-4">
             <div className="w-1/2">

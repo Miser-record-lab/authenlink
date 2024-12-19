@@ -4,7 +4,6 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import MyApproach from "@/components/MyApproach";
 import { TabsDemo } from "@/components/TabsDemo";
 import Tools from "@/components/Tools";
 import { FloatingNav } from "@/components/ui/floatingNav";

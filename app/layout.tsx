@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: "AuthenLink",
   description: "Agence d'automatisation digitale",
   icons: {
-    icon: "/authenlink.png", // Le chemin du logo dans le dossier public
-  },
+    icon: "/authenlink.png",
+  }
 };
 
 export default function RootLayout({
