@@ -58,7 +58,7 @@ const Contact = () => {
       setIsSubmitting(true);
 
       try {
-        const response = await fetch("https://n8n.authenlink.com/webhook-test/message-website-test", {
+        const response = await fetch("https://n8n.authenlink.com/webhook/message-website-test", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
