@@ -87,7 +87,7 @@ const Chatbot = () => {
             <div className="flex items-center space-x-2">
               <div>
                 <Image 
-                  src="/authenlink.png"  // Remplace par l'image du workflow N8n
+                  src="/favicon.ico"  // Remplace par l'image du workflow N8n
                   alt="logo"
                   width={50}
                   height={50}
