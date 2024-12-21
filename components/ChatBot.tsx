@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FaComment } from "react-icons/fa"; // Icône pour le bouton de chat
 import Image from "next/image";
@@ -11,13 +11,28 @@ const Chatbot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false); // Pour gérer l'état d'ouverture du chatbot
-  const [sessionId] = useState(generateSessionId()); // Session ID unique pour chaque utilisateur
+  const [sessionId, setSessionId] = useState(""); // Session ID unique pour chaque utilisateur
   const [isLoading, setIsLoading] = useState(false); // Ajout de l'état isLoading
 
   // Fonction pour générer un sessionId unique
-  function generateSessionId() {
-    return Math.random().toString(36).substring(2, 15); // Génère un ID aléatoire
-  }
+  const generateSessionId = () => {
+    // Vérifie si une session ID existe déjà dans le localStorage
+    let storedSessionId = localStorage.getItem("chatbot_session_id");
+    
+    // Si aucune session ID n'existe, en créer une nouvelle
+    if (!storedSessionId) {
+      storedSessionId = Math.random().toString(36).substring(2, 15); // Générer une ID unique
+      localStorage.setItem("chatbot_session_id", storedSessionId); // Stocker dans localStorage
+    }
+
+    return storedSessionId;
+  };
+
+  // Utilisation de useEffect pour initialiser sessionId lors du premier rendu
+  useEffect(() => {
+    const id = generateSessionId();
+    setSessionId(id);
+  }, []); // Ne s'exécute qu'une seule fois, lors du premier rendu
 
   const handleSendMessage = async () => {
     if (!input.trim()) return;
@@ -71,15 +86,14 @@ const Chatbot = () => {
           <div className="flex items-center justify-between bg-black-100 p-3 rounded-t-lg border border-b-white/[0.2]">
             <div className="flex items-center space-x-2">
               <div>
-              <Image 
-                src="/authenlink.png"  // Remplace par l'image du workflow N8n
-                alt="logo"
-                width={50}
-                height={50}
-                className=""
+                <Image 
+                  src="/authenlink.png"  // Remplace par l'image du workflow N8n
+                  alt="logo"
+                  width={50}
+                  height={50}
+                  className=""
                 />
               </div>
-              
               <span className="font-semibold text-white">AuthenLink</span>
             </div>
             <button

@@ -35,18 +35,6 @@ export const emailAndSalesTestimonials = [
       name: "Chatbots pour le Support Client",
       designation: "Automatisation des interactions client",
       src: "/ai.png",  // Image utilisée pour tous les témoignages
-    },
-    {
-      quote: "Automatisez la création, l'approbation et la gestion des flux de travail des documents.",
-      name: "Automatisation des Documents",
-      designation: "Automatisation des flux de travail de documents",
-      src: "/document.png",  // Image utilisée pour tous les témoignages
-    },
-    {
-      quote: "Réalisez des études de marché complètes de manière automatisée, en recueillant et en analysant des données provenant de diverses sources pour fournir des informations exploitables et éclairer les décisions stratégiques.",
-      name: "Études de Marché",
-      designation: "Automatisation des études de marché",
-      src: "/market.png",  // Image utilisée pour tous les témoignages
-    },
+    }
   ];
   
