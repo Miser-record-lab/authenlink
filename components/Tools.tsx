@@ -1,4 +1,4 @@
-import { FaCode, FaDatabase, FaRegEnvelope, FaChartLine, FaPlug, FaDesktop } from 'react-icons/fa';  // Import des icônes nécessaires
+import { FaCode, FaDatabase, FaRegEnvelope, FaChartLine, FaPlug, FaDesktop, FaBusinessTime } from 'react-icons/fa';  // Import des icônes nécessaires
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { FaPaperPlane, FaRobot, FaRocket } from 'react-icons/fa6';
 
@@ -32,6 +32,11 @@ const tools = [
     title: "Framer",
     icon: <FaDesktop className="text-black dark:text-white" />,  // Icône générique pour Framer
     href: "/framer",
+  },
+  {
+    title: "Instantly",
+    icon: <FaBusinessTime className="text-black dark:text-white" />,  // Icône générique pour Mailjet
+    href: "/mailjet",
   },
   {
     title: "Mailjet",

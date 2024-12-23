@@ -4,6 +4,7 @@ import MagicButton from "./ui/MagicButton";
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-1">
+      
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Prêt à faire passer <span className="text-purple">votre</span> présence numérique

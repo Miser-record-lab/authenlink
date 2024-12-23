@@ -27,8 +27,8 @@ export function TabsDemo() {
       title: "n8n",
       value: "n8n",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-lg md:text-xl font-bold p-10 text-white border border-white/[0.2]"style={{ backgroundColor: "#F56565" }}>
-            <p>Outil d&apos;automatisation des flux de travail pour connecter et automatiser des applications et des services.</p>
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-xl md:text-4xl font-bold p-10 text-white border border-white/[0.2]"style={{ backgroundColor: "#F56565" }}>
+            <p>n8n</p>
           <Image
             src="/workflown8n.jpg"  // Image spécifique à n8n
             alt="n8n"
@@ -43,8 +43,8 @@ export function TabsDemo() {
         title: "Metabase",
         value: "metabase",
         content: (
-          <div className="w-full overflow-hidden relative h-full rounded-2xl  text-lg md:text-xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#0052CC" }}>
-              <p>Outil d&apos;analyse et de visualisation des données pour créer des tableaux de bord et des rapports interactifs.</p>
+          <div className="w-full overflow-hidden relative h-full rounded-2xl  text-xl md:text-4xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#0052CC" }}>
+              <p>Metabase</p>
             <Image
               src="/metabase.jpg"  // Image spécifique à n8n
               alt="metabase"
@@ -59,8 +59,8 @@ export function TabsDemo() {
       title: "Mautic",
       value: "mautic",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-lg md:text-xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#FFA500" }}>
-            <p>Plateforme de marketing automation pour gérer les campagnes d&apos;emailing, les prospects et les interactions avec les clients.</p>
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-xl md:text-4xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#FFA500" }}>
+            <p>Mautic</p>
           
           <Image
             src="/mautictest.jpg"  // Image spécifique à Mautic
@@ -76,8 +76,8 @@ export function TabsDemo() {
       title: "Grafana",
       value: "grafana",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-lg md:text-xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#38B2AC" }}>
-        <p>Outil de surveillance et de visualisation des métriques et des données de vos outils en temps réel.</p>    
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-xl md:text-4xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#38B2AC" }}>
+        <p>Grafana</p>    
           <Image
             src="/grafana.jpg"  // Image spécifique à Grafana
             alt="Grafana"
@@ -92,8 +92,8 @@ export function TabsDemo() {
       title: "Portainer",
       value: "portainer",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-lg md:text-xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#4c0519" }}>
-        <p>Interface de gestion des containers Docker pour faciliter la gestion des environnements et applications conteneurisées.</p>
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-xl md:text-4xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#4c0519" }}>
+        <p>Portainer</p>
           <Image
             src="/portainer.jpg"  // Image spécifique à Portainer
             alt="Portainer"

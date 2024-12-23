@@ -21,7 +21,7 @@ const Hero = () => {
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
       <div
-        className="h-[60vh] md:h-[70vh] w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+        className="h-[60vh] md:h-[65vh] w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
          absolute top-0 left-0 flex items-center justify-center"
       >
         {/* Radial gradient for the container to give a faded look */}
@@ -35,21 +35,15 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           {/* Nouveau texte avec FlipWords pour les services */}
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 mb-5">
-            Marketing et data automatisation
+            Marketing & data automation
           </p>
-          <p className="text-center text-[40px] md:text-5xl lg:text-6xl mb-5">
+          <p className="text-center text-[40px] md:text-5xl lg:text-6xl">
             Création de solution d&apos;IA personnalisées <br /> pour vos services <br />
             <FlipWords
               words={["Marketing", "Data", "Ressources Humaines", "Service Client", "Finance", "Opérations"]}
               duration={3000} // Durée du changement des mots // Vous pouvez ajouter des classes CSS ici
             />
           </p>
-
-          {/* Nouveau texte d'introduction */}
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-md lg:text-2xl">
-            Réduisez de 30 % le temps consacré aux tâches répétitives en 120 jours
-          </p>
-
           <a href="#rendez-vous">
             <MagicButton
               title="Prendre rendez-vous"

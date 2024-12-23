@@ -38,3 +38,31 @@ export const emailAndSalesTestimonials = [
     }
   ];
   
+
+  export const testimonials = [
+    {
+      quote: "Nous vous aidons à Automatiser vos campagnes d'e-mails transactionnels, newsletters, onboarding et recolter les données liées pour qualifier vos Leads et les activer.",
+      name: "Service Marketing",
+      designation: "Automatisation des e-mails et des ventes",
+      src: "/email.png",  // Image utilisée pour tous les témoignages
+    },
+    {
+      quote: "Déployez des chatbots entrainé sur votre propre entreprise pour fournir un support à vos employé ou un support client instantané et disponible 24/7, en répondant aux demandes courantes.",
+      name: "Service Client",
+      designation: "Chatbots pour les services",
+      src: "/ai.png",  // Image utilisée pour tous les témoignages
+    },
+    {
+      quote: "Optimisez vos processus complexes en reliant plusieurs systèmes et processus pour une gestion fluide et efficace.",
+      name: "Ressource Humaine",
+      designation: "Automatisation des processus",
+      src: "/automate.png",  // Image utilisée pour tous les témoignages
+    },
+    {
+      quote: "Nous vous aidons dans l'installation d'un logiciel permettant de centraliser vos données et de les visualiser grace à des dashboards, KPIs et suivis en temps réel des activités de votre entreprise.",
+      name: "Service Data",
+      designation: "Utiliser vos datas !",
+      src: "/crm.png",  // Image utilisée pour tous les témoignages
+    },
+  ];
+  
