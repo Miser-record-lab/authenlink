@@ -7,8 +7,7 @@ const Footer = () => {
       
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Prêt à faire passer <span className="text-purple">votre</span> présence numérique
-          à un niveau supérieur ?
+          Prêt à <span className="text-purple">optimiser</span> vos services et <span className="text-purple">accélérer</span> votre croissance?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Prennez rendez-vous et discutons dès aujourd&apos;hui de la manière dont je peux vous aider <br />
