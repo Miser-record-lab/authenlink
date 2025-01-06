@@ -7,6 +7,9 @@ const Features = () => {
     <div className="py-20" id="presentation">  
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
 
+        <p className="text-center text-2xl sm:text-3xl text-white mb-20">
+        Rejoignez la révolution <span className="text-purple">IA</span> avec des solutions <span className="text-purple">sur mesure</span>, performantes et accessibles. <br></br>Prenez une longueur d&apos;avance sur vos concurrents en <span className="text-purple">transformant vos processus</span> et en <span className="text-purple">maximisant votre efficacité</span>.
+        </p>
         <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6 z-110">
           Nos <span className="text-purple">Solutions</span>
         </h2>

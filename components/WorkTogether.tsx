@@ -34,7 +34,7 @@ const WorkTogether = () => {
               <FaDatabase className="text-white text-4xl" />
             </div>
             <h4 className="text-2xl font-semibold text-white mb-4">Propositions d’axes d&apos;améliorations</h4>
-            <p className="text-white">Je vous propose une série d&apos;actions personnalisées à réaliser pour optimiser vos processus internes.</p>
+            <p className="text-white">Nous vous proposons une série d&apos;actions personnalisées à réaliser pour optimiser vos processus internes.</p>
           </div>
 
           {/* Step 3: Yellow Card */}
@@ -44,7 +44,7 @@ const WorkTogether = () => {
               <FaCode className="text-white text-4xl" />
             </div>
             <h4 className="text-2xl font-semibold text-white mb-4">Développement 100% personnalisé</h4>
-            <p className="text-white">En collaboration avec les services concerné, je développe les solutions pour répondre le plus précisément à vos besoins.</p>
+            <p className="text-white">En collaboration avec les services concerné, nous développons les solutions pour répondre le plus précisément à vos besoins.</p>
           </div>
         </div>
 
@@ -57,7 +57,7 @@ const WorkTogether = () => {
               <FaRocket className="text-white text-4xl" />
             </div>
             <h4 className="text-2xl font-semibold text-white mb-4">Implémentation des solutions</h4>
-            <p className="text-white">Je déploie les automatisations validées au sein de votre entreprise et assure un suivi pour leur bonne intégration.</p>
+            <p className="text-white">Nous déployons les automatisations validées au sein de votre entreprise et assurons un suivi pour leur bonne intégration.</p>
           </div>
 
           {/* Step 5: Blue Card */}
@@ -67,7 +67,7 @@ const WorkTogether = () => {
               <FaUserTie className="text-white text-4xl" />
             </div>
             <h4 className="text-2xl font-semibold text-white mb-4">Formation et accompagnement</h4>
-            <p className="text-white">Je forme vos équipes pour qu&apos;elles puissent maîtriser les nouvelles automatisations mises en place.</p>
+            <p className="text-white">Nous formons vos équipes pour qu&apos;elles puissent maîtriser les nouvelles automatisations mises en place.</p>
           </div>
         </div>
       </div>
