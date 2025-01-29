@@ -5,7 +5,8 @@ import React, {
   useState,
   createContext,
   useContext,
-  JSX
+  JSX,
+  RefObject
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -184,7 +185,8 @@ export const Card = ({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  useOutsideClick(containerRef, () => handleClose());
+    useOutsideClick(containerRef as RefObject<HTMLDivElement>, () => handleClose());
+
 
   const handleOpen = () => {
     setOpen(true);
