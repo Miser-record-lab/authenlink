@@ -24,8 +24,32 @@ export function AppleCardsCarouselDemo() {
 
 
 const data = [
+    {
+        category: "Implémentation d’Agent IA",
+        title: "Automatisez vos process avec l'IA",
+        src: "/virtual-assistant.jpg",
+        content: (
+          <div className="bg-[#F5F5F7] dark:bg-black-300 p-8 md:p-14 rounded-3xl mb-4">
+            <p className="text-neutral-600 dark:text-neutral-100 text-base md:text-2xl font-sans max-w-3xl">
+              Déployez des agents IA capables de répondre aux prospects, gérer le support client et optimiser votre productivité en entreprise.
+            </p>
+            <ul className="text-neutral-600 dark:text-neutral-100 text-lg md:text-xl font-sans max-w-3xl mx-auto mt-4 space-y-2">
+              <li className="flex items-center gap-2"><RiRobot2Fill className="text-purple-500" /> Chatbots & Assistants IA</li>
+              <li className="flex items-center gap-2"><FaCheckCircle className="text-purple-500" /> Automatisation des interactions</li>
+              <li className="flex items-center gap-2"><FaCode className="text-purple-500" /> Intégration sur mesure</li>
+            </ul>
+            <h4 className="text-lg font-bold mt-6">Outils utilisés :</h4>
+            <ul className="flex gap-6 mt-2 text-3xl">
+              <SiReact className="text-blue-500" />
+              <SiJavascript className="text-yellow-500" />
+              <FaPython className="text-green-500" />
+              <SiN8N className="text-orange-500" />
+            </ul>
+          </div>
+        ),
+      },
   {
-    category: "Automatisation de Prospection & Cold Emailing",
+    category: "Prospection & Cold Emailing Automatique",
     title: "Générez des leads en automatique",
     src: "/email-automation.jpg",
     content: (
@@ -41,38 +65,15 @@ const data = [
         <h4 className="text-lg font-bold mt-6">Outils utilisés :</h4>
         <ul className="flex gap-6 mt-2 text-3xl"> 
           <SiMautic className="text-blue-500" />
-          <SiN8N className="text-orange-500" />
+          <SiN8N className="text-orange-700" />
           <SiJavascript className="text-yellow-500" />
         </ul>
       </div>
     ),
   },
+
   {
-    category: "Implémentation d’Agent IA",
-    title: "Automatisez vos process avec l'IA",
-    src: "/virtual-assistant.jpg",
-    content: (
-      <div className="bg-[#F5F5F7] dark:bg-black-300 p-8 md:p-14 rounded-3xl mb-4">
-        <p className="text-neutral-600 dark:text-neutral-100 text-base md:text-2xl font-sans max-w-3xl">
-          Déployez des agents IA capables de répondre aux prospects, gérer le support client et optimiser votre productivité en entreprise.
-        </p>
-        <ul className="text-neutral-600 dark:text-neutral-100 text-lg md:text-xl font-sans max-w-3xl mx-auto mt-4 space-y-2">
-          <li className="flex items-center gap-2"><RiRobot2Fill className="text-purple-500" /> Chatbots & Assistants IA</li>
-          <li className="flex items-center gap-2"><FaCheckCircle className="text-purple-500" /> Automatisation des interactions</li>
-          <li className="flex items-center gap-2"><FaCode className="text-purple-500" /> Intégration sur mesure</li>
-        </ul>
-        <h4 className="text-lg font-bold mt-6">Outils utilisés :</h4>
-        <ul className="flex gap-6 mt-2 text-3xl">
-          <SiReact className="text-blue-500" />
-          <SiJavascript className="text-yellow-500" />
-          <FaPython className="text-green-500" />
-          <SiN8N className="text-orange-500" />
-        </ul>
-      </div>
-    ),
-  },
-  {
-    category: "Growth Hacking Services",
+    category: "Services Growth Hacking",
     title: "Boostez votre acquisition client",
     src: "/growth-hacking.jpg",
     content: (
