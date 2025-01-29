@@ -1,6 +1,6 @@
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card"; // Importation des composants de cartes
-import Image from "next/image";  // Importation de l'image de Next.js
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
 
 const Features = () => {
   return (
@@ -8,110 +8,120 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
 
         <p className="text-center text-2xl sm:text-3xl text-white mb-20">
-        Rejoignez la révolution <span className="text-purple">IA</span> avec des solutions <span className="text-purple">sur mesure</span>, performantes et accessibles. <br></br>Prenez une longueur d&apos;avance sur vos concurrents en <span className="text-purple">transformant vos processus</span> et en <span className="text-purple">maximisant votre efficacité</span>.
+          Optez pour une <span className="text-purple">infrastructure optimisée</span> pour automatiser, analyser et maximiser vos performances.
         </p>
-        <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6 z-110">
-          Nos <span className="text-purple">Solutions</span>
+
+        <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6">
+          Nos <span className="text-purple">Infrastructures</span>
         </h2>
-        {/* Grille de 4 cartes */}
-        <div className="grid grid-cols-1  lg:grid-cols-2 gap-10 justify-center items-center">
 
-        <div className="flex justify-center">
-            <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-                <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Développement Web & <span className="text-purple">Optimisation</span>
-                </CardItem>
-                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Nous utilisons le <span className="text-purple">code</span> pour améliorer vos différents services en tirant pleinement parti de vos outils existants.
-                </CardItem>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center">
 
-                <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
-                  <Image
-                    src="/code.jpg"  // Remplace par l'image du workflow N8n
-                    alt="code image"
-                    width={600}
-                    height={400}
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-white/[0.2]"
-                  />
-                </CardItem>
-              </CardBody>
-            </CardContainer>
-          </div>
-
-         <div className="flex justify-center">
-            <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-                <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Automatisation des <span className="text-purple">Processus interne</span>
-                </CardItem>
-                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Utiliser des <span className="text-purple">Agents IA</span> pour automatiser les tâches répétitives et accélérer votre croissance.
-                </CardItem>
-                <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
-                  <Image
-                    src="/workflown8n.jpg"  // Remplace par l'image des outils Open-Source
-                    alt="Outils Open-Source"
-                    width={600}
-                    height={400}
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-white/[0.2]"
-                  />
-                </CardItem>
-              </CardBody>
-            </CardContainer>
-          </div>
-
-
-          {/* Carte 1 - Marketing Automatisé */}
-
-
-          {/* Carte 2 - Analyse de données */}
+          {/* Infrastructure 1 - Développement Web & Optimisation */}
           <div className="flex justify-center">
             <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Gestions et analyses des <span className="text-purple">Données</span>
+                  Infrastructure <span className="text-purple">Web & Automatisation</span>
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Collecter, tracker, analyser et exploiter les données de votre plateforme pour optimiser la <span className="text-purple">gestion de vos leads</span> et améliorer la <span className="text-purple">réactivité de votre service client.</span>
+                  Mise en place d’environnements de développement modernes, intégration de workflows et API pour automatiser vos process.
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  🚀 Bénéfice : Accélérez votre productivité et réduisez la charge opérationnelle.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
                   <Image
-                    src="/metabasecustomers.jpg"  // Remplace par l'image de Metabase (en attendant)
-                    alt="Metabase"
+                    src="/code.jpg"
+                    alt="Code Automation"
                     width={600}
                     height={400}
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-white/[0.2]"
+                    className="h-60 w-full object-cover rounded-xl border border-white/[0.2]"
                   />
                 </CardItem>
               </CardBody>
             </CardContainer>
           </div>
 
+          {/* Infrastructure 2 - Automatisation des Processus */}
           <div className="flex justify-center">
-            <CardContainer className="relative w-full flex flex-wrap">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-              <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                Infrastructure <span className="text-purple">Email Marketing</span> & <span className="text-purple">Cold Mailing</span>
-              </CardItem>
-              <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                Opter pour une infrastrucutre de marketing Automation pour <span className="text-purple">gérer</span> et <span className="text-purple">activer</span> vos leads grace à des campagnes sur mesure (BtoB & BtoC).
-              </CardItem>
-
+            <CardContainer className="relative w-full">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+                <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+                  Infrastructure d’<span className="text-purple">Automatisation & IA</span>
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  Mise en place de workflows automatisés avec <span className="text-purple">n8n</span> et intégration de langages d’IA avancée pour l’optimisation des processus métier.
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  🤖 Bénéfice : Des processus optimisés, une gestion plus rapide et une réduction des tâches manuelles.
+                </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
                   <Image
-                    src="/mautictest.jpg"  // Remplace par l'image de Mautic
-                    alt="Mautic"
+                    src="/workflown8n.jpg"
+                    alt="Workflow Automation & AI"
                     width={600}
                     height={400}
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-white/[0.2]"
+                    className="h-60 w-full object-cover rounded-xl border border-white/[0.2]"
                   />
                 </CardItem>
               </CardBody>
             </CardContainer>
           </div>
 
-          {/* Carte 3 - Assistant Virtuel */}
+
+          {/* Infrastructure 3 - Gestion et Analyse des Données */}
+          <div className="flex justify-center">
+            <CardContainer className="relative w-full">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+                <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+                  Infrastructure de <span className="text-purple">Data Analyse</span>
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  Intégration de solutions comme <span className="text-purple">Metabase</span> pour transformer vos données en insights actionnables.
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  📊 Bénéfice : Améliorez vos prises de décisions grâce à une visualisation des KPI et du ROI.
+                </CardItem>
+                <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
+                  <Image
+                    src="/metabasecustomers.jpg"
+                    alt="Metabase Analytics"
+                    width={600}
+                    height={400}
+                    className="h-60 w-full object-cover rounded-xl border border-white/[0.2]"
+                  />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+          </div>
+
+          {/* Infrastructure 4 - Prospection & Cold Mailing */}
+          <div className="flex justify-center">
+            <CardContainer className="relative w-full">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+                <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+                  Infrastructure de <span className="text-purple">Prospection & Cold Emailing</span>
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  Mise en place d’une infrastructure <span className="text-purple">Mautic</span> pour automatiser vos campagnes de prospection et maximiser la conversion.
+                </CardItem>
+                <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+                  📩 Bénéfice : Envoyez des campagnes ultra-personnalisées et suivez vos résultats en temps réel.
+                </CardItem>
+                <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
+                  <Image
+                    src="/mautictest.jpg"
+                    alt="Mautic Cold Emailing"
+                    width={600}
+                    height={400}
+                    className="h-60 w-full object-cover rounded-xl border border-white/[0.2]"
+                  />
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+          </div>
+
         </div>
       </div>
     </div>
