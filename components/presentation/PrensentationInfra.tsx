@@ -11,7 +11,6 @@ const infrastructures = [
     points: [
       "⚡ Gagnez jusqu'à 30% de productivité en automatisant vos tâches répétitives.",
       "🤖 50% des demandes clients traitées automatiquement via des agents IA.",
-      "🔗 Intégration fluide avec vos outils CRM et logiciels métiers.",
     ],
   },
   {
@@ -21,7 +20,6 @@ const infrastructures = [
     points: [
       "📩 Plus de 10 000 emails envoyés chaque mois à des prospects qualifiés.",
       "💡 Personnalisation dynamique des emails pour améliorer l'engagement.",
-      "🚀 Automatisation des relances pour maximiser les taux de conversion.",
     ],
   },
   {
@@ -31,7 +29,7 @@ const infrastructures = [
     points: [
       "📊 Visualisation en temps réel des performances de votre entreprise.",
       "📈 Suivi précis des KPIs marketing, financiers et opérationnels.",
-      "🔎 Identification rapide des opportunités d'optimisation grâce aux données.",
+      
     ],
   },
   {
@@ -41,7 +39,6 @@ const infrastructures = [
     points: [
       "🌍 Création de sites web performants et optimisés SEO.",
       "📝 Mise en place de blogs automatisés et conversion optimisée.",
-      "📡 Intégration d'outils open-source pour réduire vos coûts d'infrastructure.",
     ],
   },
 ];
