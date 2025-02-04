@@ -1,8 +1,8 @@
 import React from 'react';
-import { FaLocationArrow } from 'react-icons/fa6';
 import { FlipWords } from './ui/flip-words';
 import MagicButton from './ui/MagicButton';
 import { Spotlight } from './ui/Spotlight';
+import { FaCalendarAlt, FaPlayCircle } from 'react-icons/fa';
 
 
 const Hero = () => {
@@ -44,13 +44,26 @@ const Hero = () => {
               duration={3000} // Durée du changement des mots // Vous pouvez ajouter des classes CSS ici
             />
           </p>
-          <a href="#rendez-vous">
-            <MagicButton
-              title="Prendre rendez-vous"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex gap-10">
+              {/* Bouton Voir la présentation */}
+              <a href="/presentation">
+                <MagicButton
+                  title="Voir la présentation"
+                  icon={<FaPlayCircle />} // Icône lecture pour indiquer une vidéo ou une présentation
+                  position="right"
+                />
+              </a>
+
+              {/* Bouton Prendre rendez-vous */}
+              <a href="#rendez-vous">
+                <MagicButton
+                  title="Prendre rendez-vous"
+                  icon={<FaCalendarAlt />} // Icône calendrier pour indiquer la prise de rendez-vous
+                  position="right"
+                />
+              </a>
+          </div>
+
         </div>
       </div>
     </div>

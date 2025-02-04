@@ -21,27 +21,38 @@ const Features = () => {
           <div className="flex justify-center">
             <CardContainer className="relative w-full">
               <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+                
+                {/* Titre */}
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
-                  Infrastructure <span className="text-purple">Web & Automatisation</span>
+                  Infrastructure <span className="text-purple">Web & SEO Automatisé</span>
                 </CardItem>
+
+                {/* Description principale */}
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  Mise en place d’environnements de développement modernes, intégration de workflows et API pour automatiser vos process.
+                  Développement de sites web performants, création de landing pages optimisées et intégration de blogs SEO automatisés pour générer du trafic qualifié.
                 </CardItem>
+
+                {/* Bénéfice */}
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  🚀 Bénéfice : Accélérez votre productivité et réduisez la charge opérationnelle.
+                  🚀 <strong>Bénéfice :</strong> Améliorez votre infrastructure web pour en faire un outil d’acquisition client puissant et automatisé.
                 </CardItem>
+
+
+                {/* Image */}
                 <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
                   <Image
                     src="/code.jpg"
-                    alt="Code Automation"
+                    alt="Création de sites web et SEO automatisé"
                     width={600}
                     height={400}
                     className="h-60 w-full object-cover rounded-xl border border-white/[0.2]"
                   />
                 </CardItem>
+
               </CardBody>
             </CardContainer>
           </div>
+
 
           {/* Infrastructure 2 - Automatisation des Processus */}
           <div className="flex justify-center">
@@ -54,7 +65,7 @@ const Features = () => {
                   Mise en place de workflows automatisés avec <span className="text-purple">n8n</span> et intégration de langages d’IA avancée pour l’optimisation des processus métier.
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  🤖 Bénéfice : Des processus optimisés, une gestion plus rapide et une réduction des tâches manuelles.
+                  🤖 <strong>Bénéfice :</strong> Des processus optimisés, une gestion plus rapide et une réduction des tâches manuelles.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
                   <Image
@@ -81,7 +92,7 @@ const Features = () => {
                   Intégration de solutions comme <span className="text-purple">Metabase</span> pour transformer vos données en insights actionnables.
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  📊 Bénéfice : Améliorez vos prises de décisions grâce à une visualisation des KPI et du ROI.
+                  📊 <strong>Bénéfice :</strong> Améliorez vos prises de décisions grâce à une visualisation des KPI et du ROI.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
                   <Image
@@ -107,7 +118,7 @@ const Features = () => {
                   Mise en place d’une infrastructure <span className="text-purple">Mautic</span> pour automatiser vos campagnes de prospection et maximiser la conversion.
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  📩 Bénéfice : Envoyez des campagnes ultra-personnalisées et suivez vos résultats en temps réel.
+                  📩 <strong>Bénéfice :</strong> Envoyez des campagnes ultra-personnalisées et suivez vos résultats en temps réel.
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={10} className="w-full mt-4">
                   <Image

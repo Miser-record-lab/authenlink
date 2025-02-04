@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import { FaCheckCircle, FaCode, FaDatabase, FaPython } from "react-icons/fa";
-import { MdEmail, MdOutlineDataUsage, MdOutlineAutorenew } from "react-icons/md";
+import { FaCheckCircle, FaCode, FaDatabase, FaPython, FaRocket, FaSearch } from "react-icons/fa";
+import { MdEmail, MdOutlineDataUsage, MdOutlineAutorenew, MdWeb } from "react-icons/md";
 import { RiRobot2Fill, RiSearchEyeFill } from "react-icons/ri";
-import { SiGoogleanalytics, SiJavascript, SiMautic, SiMetabase, SiN8N, SiReact } from "react-icons/si";
+import { SiFramer, SiGoogleanalytics, SiJavascript, SiMautic, SiMetabase, SiN8N, SiReact } from "react-icons/si";
 
 
 export function AppleCardsCarouselDemo() {
@@ -71,7 +71,32 @@ const data = [
       </div>
     ),
   },
-
+  {
+    category: "Développement Web & Optimisation SEO",
+    title: "Boostez votre visibilité et vos conversions",
+    src: "/web-seo.jpg",
+    content: (
+      <div className="bg-[#F5F5F7] dark:bg-black-300 p-8 md:p-14 rounded-3xl mb-4">
+        <p className="text-neutral-600 dark:text-neutral-100 text-base md:text-2xl font-sans max-w-3xl">
+          Améliorez votre présence en ligne avec un site optimisé, rapide et structuré pour un référencement naturel efficace.
+        </p>
+        <ul className="text-neutral-600 dark:text-neutral-100 text-lg md:text-xl font-sans max-w-3xl mx-auto mt-4 space-y-2">
+          <li className="flex items-center gap-2"><FaRocket className="text-blue-500" /> Création de landing pages performantes</li>
+          <li className="flex items-center gap-2"><MdWeb className="text-blue-500" /> Développement et intégration de blogs</li>
+          <li className="flex items-center gap-2"><FaSearch className="text-blue-500" /> Optimisation SEO on-page et technique</li>
+          <li className="flex items-center gap-2"><MdOutlineAutorenew className="text-blue-500" /> Automatisation des processus web (formulaires, tracking, etc.)</li>
+        </ul>
+        <h4 className="text-lg font-bold mt-6">Outils utilisés :</h4>
+        <ul className="flex gap-6 mt-2 text-3xl">
+          <SiJavascript className="text-yellow-500" />
+          <FaPython className="text-green-500" />
+          <SiN8N className="text-orange-500" />
+          <SiFramer className="text-purple-500" />
+        </ul>
+      </div>
+    ),
+  },
+  
   {
     category: "Services Growth Hacking",
     title: "Boostez votre acquisition client",

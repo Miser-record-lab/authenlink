@@ -32,7 +32,7 @@ const AppointmentAndQuestions = () => {
             <div className="flex justify-center">
               <div
                 className="calendly-inline-widget border border-white/[0.2] rounded-lg shadow-lg overflow-hidden"
-                data-url="https://calendly.com/authenlink/30min?hide_gdpr_banner=1&background_color=111928&text_color=ffffff"
+                data-url="https://calendly.com/authenlink/30min?hide_event_type_details=1&hide_gdpr_banner=1"
                 style={{ minWidth:"500px", maxHeight: "700px" , minHeight: "500px"}}
               ></div>
             </div>
@@ -43,3 +43,5 @@ const AppointmentAndQuestions = () => {
 };
 
 export default AppointmentAndQuestions;
+
+
