@@ -1,3 +1,4 @@
+import PresentationInfra from "@/components/presentation/PrensentationInfra";
 import PresentationAuthority from "@/components/presentation/PresentationAuthority";
 import PresentationCuriosity from "@/components/presentation/PresentationCuriosity";
 import PresentationGuaranteeAndCTA from "@/components/presentation/PresentationGuaranteeAndCTA";
@@ -22,6 +23,7 @@ export default function Presentation() {
         <PresentationCuriosity />
         <PresentationAuthority />
         <PresentationOffer />
+        <PresentationInfra />
         <PresentationUrgency />  
         <PresentationGuaranteeAndCTA />
         <PresentationPostScript />
