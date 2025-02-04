@@ -50,7 +50,7 @@ const PresentationCuriosity = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        💰 Pour seulement 50€ par mois, votre serveur IA est prêt à l&apos;emploi !
+        💰 Pour seulement quelques centaines d’euros par mois, votre serveur IA et vos premières automatisations sont prêts à l’emploi !
       </motion.div>
 
     </section>

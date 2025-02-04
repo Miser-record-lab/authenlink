@@ -39,7 +39,7 @@ const PresentationSolution = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        Une agence spécialisée dans l’implémentation d’infrastructures open-source et d’outils d’automatisation**,
+        Une agence spécialisée dans l’implémentation d’infrastructures open-source et d’outils d’automatisation,
         hébergés sur votre propre serveur, sans abonnement SaaS coûteux, et à moindre coût.
       </motion.p>
 
