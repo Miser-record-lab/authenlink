@@ -66,24 +66,18 @@ const PresentationOffer = () => {
           animate={{ scale: 1.1 }}
           transition={{ yoyo: Infinity, duration: 1 }}
         >
-          1500€ / mois
+          2000€ / mois
         </motion.p>
         <p className="text-gray-400 mt-2">pendant 3 mois pour un accompagnement complet.</p>
-        <motion.p 
-          className="text-xl sm:text-2xl font-bold text-white mt-4"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1.1 }}
-          transition={{ yoyo: Infinity, duration: 1 }}
-        >
-          Des agents IA et autres automatisation à partir de 500€ / mois
-        </motion.p>
+        <p className="text-gray-300 mt-2">* Vente des prises de rendez-vous pour prospection BtoB (3 premiers rendez-vous avec lead qualifié offert).</p>
+
         <motion.p 
           className="text-lg text-teal-400 font-bold mt-4"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
         >
-          🔹 Jusqu’à 3X moins cher qu’un développeur interne !
+          🔹 Plus besoin d&apos;embaucher un développeur supplémantaire, un data analyst et un growth hacker, optez pour une agence tout en un !
         </motion.p>
       </motion.div>
 
