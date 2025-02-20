@@ -6,18 +6,18 @@ import { FaCheckCircle, FaBolt, FaUserTie } from "react-icons/fa";
 const offerPoints = [
   { 
     icon: <FaCheckCircle className="text-teal-400 text-4xl" />, 
-    title: "✅ Accès à des infrastructures performantes",
-    description: "Des outils puissants, sans abonnement SaaS coûteux, au prix le plus bas du marché." 
+    title: "✅ Des outils performants et sur-mesure",
+    description: "Nous intégrons des solutions IA et automatisations adaptées à votre entreprise pour maximiser l'efficacité de vos services." 
   },
   { 
     icon: <FaBolt className="text-teal-400 text-4xl" />, 
-    title: "⚡ Déploiement ultra-rapide",
-    description: "Mise en place des agents IA, campagnes marketing et dashboards en moins de 30 jours." 
+    title: "⚡ Un déploiement rapide et efficace",
+    description: "Mise en place optimisée pour des résultats visibles en quelques semaines, sans complexité technique." 
   },
   { 
     icon: <FaUserTie className="text-teal-400 text-4xl" />, 
-    title: "📢 Accompagnement sur-mesure",
-    description: "Formation et support pour que votre équipe maîtrise les outils déployés." 
+    title: "📢 Un accompagnement stratégique",
+    description: "Nous nous occupons du développement, du marketing et de la gestion web pour une approche 360° adaptée à votre croissance." 
   }
 ];
 
@@ -52,33 +52,21 @@ const PresentationOffer = () => {
         ))}
       </div>
 
-      {/* Offre de lancement - Animation du prix */}
+      {/* Explication sur l'agence tout-en-un */}
       <motion.div 
         className="mt-12 text-center bg-gray-800 py-6 px-8 rounded-xl shadow-lg max-w-lg"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <p className="text-lg text-gray-300">📢 <span className="text-teal-400 font-bold">Notre offre de lancement :</span></p>
-        <motion.p 
-          className="text-4xl sm:text-5xl font-bold text-white mt-4"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1.1 }}
-          transition={{ yoyo: Infinity, duration: 1 }}
-        >
-          2000€ / mois
-        </motion.p>
-        <p className="text-gray-400 mt-2">pendant 3 mois pour un accompagnement complet.</p>
-        <p className="text-gray-300 mt-2">* Vente des prises de rendez-vous pour prospection BtoB (3 premiers rendez-vous avec lead qualifié offert).</p>
-
-        <motion.p 
-          className="text-lg text-teal-400 font-bold mt-4"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          🔹 Plus besoin d&apos;embaucher un développeur supplémantaire, un data analyst et un growth hacker, optez pour une agence tout en un !
-        </motion.p>
+        <p className="text-lg text-teal-400 font-bold">💡 Pourquoi choisir une agence tout-en-un ?</p>
+        <p className="text-gray-300 mt-4">
+          Plutôt que de multiplier les prestataires et embaucher séparément un développeur, un data analyst et un expert en marketing,
+          optez pour <strong>une seule agence</strong> qui gère l’ensemble de votre infrastructure digitale, vos automatisations et votre acquisition client.
+        </p>
+        <p className="text-gray-300 mt-2">
+          🚀 Un seul interlocuteur, une vision globale et une exécution optimisée pour votre croissance.
+        </p>
       </motion.div>
 
     </section>

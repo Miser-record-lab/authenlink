@@ -73,6 +73,23 @@ export function TabsDemo() {
       ),
     },
     {
+      title: "Instantly",
+      value: "instantly",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-xl md:text-4xl font-bold p-10 text-white border border-white/[0.2]" style={{ backgroundColor: "#FFA500" }}>
+            <p>Instantly</p>
+          
+          <Image
+            src="/instantly.jpg"  // Image spécifique à Mautic
+            alt="Instantly"
+            width={1000}
+            height={1000}
+            className="object-cover object-center h-[80%] md:h-[85%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto border border-t-white/[0.2] border-x-white/[0.2]"
+          />
+        </div>
+      ),
+    },
+    {
       title: "Grafana",
       value: "grafana",
       content: (

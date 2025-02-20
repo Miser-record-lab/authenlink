@@ -39,13 +39,14 @@ const PresentationSolution = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        Une agence spécialisée dans l’implémentation d’infrastructures open-source et d’outils d’automatisation,
-        hébergés sur votre propre serveur, sans abonnement SaaS coûteux, et à moindre coût.
+        Une agence spécialisée dans l’implémentation d’outils et de stratégies basées sur l’IA,
+        permettant aux entreprises d’optimiser leurs services et d’améliorer leur efficacité,
+        le tout à moindre coût.
       </motion.p>
 
       {/* Animation des mots-clés (Zoom progressif) */}
       <div className="flex flex-col sm:flex-row gap-6 mt-8">
-        {["open-source", "sans abonnement SaaS", "à moindre coût"].map((word, index) => (
+        {["Intelligence Artificielle", "Optimisation des services", "À moindre coût"].map((word, index) => (
           <motion.div
             key={index}
             className="p-4 bg-gray-900 rounded-xl shadow-lg text-lg font-semibold text-teal-400"
