@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import { AppleCardsCarouselDemo } from "@/components/Presentation";
+import ServicesList from "@/components/PresentationAgent";
 import { TabsDemo } from "@/components/TabsDemo";
 import Tools from "@/components/Tools";
 import { FloatingNav } from "@/components/ui/floatingNav";
@@ -17,7 +17,7 @@ export default function Home() {
       <div className=" w-full">
         <FloatingNav navItems={navItems}/>
         <Hero />
-        <AppleCardsCarouselDemo />
+        <ServicesList />
         <Features />
         <WorkTogether />
         <AppointmentAndQuestions />

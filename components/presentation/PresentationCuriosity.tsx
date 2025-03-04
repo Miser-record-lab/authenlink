@@ -1,13 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaChartBar, FaRobot, FaTools } from "react-icons/fa";
+import { FaRobot, FaEnvelopeOpenText, FaTools } from "react-icons/fa";
 
 const features = [
-  { icon: <FaEnvelope className="text-teal-400 text-4xl" />, title: "Infrastructure de mailing", description: "Marketing automation & prospection B2B automatisée." },
-  { icon: <FaChartBar className="text-teal-400 text-4xl" />, title: "Infrastructure data", description: "Dashboards, visualisation de vos KPIs et reporting dynamique." },
-  { icon: <FaRobot className="text-teal-400 text-4xl" />, title: "Infrastructure d’automatisation", description: "Agents IA, chatbots et automatisation des processus internes." },
-  { icon: <FaTools className="text-teal-400 text-4xl" />, title: "Optimisation web", description: "Amélioration et automatisation des infrastructures avec du code et no-code." }
+  { 
+    icon: <FaRobot className="text-teal-400 text-4xl" />, 
+    title: "Agent IA", 
+    description: "Automatisation service client, chatbot, gestion des boîtes mails, publications sur les réseaux sociaux et bien plus." 
+  },
+  { 
+    icon: <FaEnvelopeOpenText className="text-teal-400 text-4xl" />, 
+    title: "Infrastructure de prospection BtoB", 
+    description: "Sourcing des leads, set up d’infrastructure de mailing (+100K emails/mois), campagnes automatisées." 
+  },
+  { 
+    icon: <FaTools className="text-teal-400 text-4xl" />, 
+    title: "Optimisation & Automatisations", 
+    description: "Optimisation web, création de blogs, développement, automatisations sur-mesure pour votre activité." 
+  }
 ];
 
 const PresentationCuriosity = () => {

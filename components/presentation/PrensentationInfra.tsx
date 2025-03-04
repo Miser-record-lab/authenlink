@@ -1,46 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaServer, FaEnvelope, FaChartBar, FaCode, FaRobot } from "react-icons/fa";
+import { FaServer, FaRobot, FaEnvelopeOpenText } from "react-icons/fa";
 
 const infrastructures = [
   {
     icon: <FaRobot className="text-teal-400 text-5xl" />,
-    title: "Workflow Automation",
-    description: "Agents IA, automatisation des tâches et intégrations intelligentes.",
+    title: "Workflow Automation & Agents IA",
+    description: "Automatisation des tâches, agents IA et intégrations intelligentes.",
     points: [
       "⚡ Gagnez jusqu'à 30% de productivité en automatisant vos tâches répétitives.",
       "🤖 50% des demandes clients traitées automatiquement via des agents IA.",
     ],
+    pricing: "💰 Prix : de 200€ à 800€/mois pour une automatisation complète d’un service."
   },
   {
-    icon: <FaEnvelope className="text-teal-400 text-5xl" />,
-    title: "Mailing Automation",
-    description: "Campagnes d'emailing intelligentes, cold mailing & marketing automation.",
+    icon: <FaEnvelopeOpenText className="text-teal-400 text-5xl" />,
+    title: "📢 Prospection BtoB & Leads",
+    description: "Mise en place d’une infrastructure de mailing performante et vente de leads qualifiés.",
     points: [
-      "📩 Plus de 10 000 emails envoyés chaque mois à des prospects qualifiés.",
-      "💡 Personnalisation dynamique des emails pour améliorer l'engagement.",
+      "📩 Plus de 100K emails envoyés chaque mois à des prospects qualifiés.",
+      "🎯 Vente de leads ultra-qualifiés à partir de vos critères spécifiques.",
     ],
-  },
-  {
-    icon: <FaChartBar className="text-teal-400 text-5xl" />,
-    title: "Data Visualisation",
-    description: "Dashboards interactifs, suivi des KPIs et reporting en temps réel.",
-    points: [
-      "📊 Visualisation en temps réel des performances de votre entreprise.",
-      "📈 Suivi précis des KPIs marketing, financiers et opérationnels.",
-      
-    ],
-  },
-  {
-    icon: <FaCode className="text-teal-400 text-5xl" />,
-    title: "Code & Intégrations",
-    description: "Développement de sites web, landing pages et intégration d'outils.",
-    points: [
-      "🌍 Création de sites web performants et optimisés SEO.",
-      "📝 Mise en place de blogs automatisés et conversion optimisée.",
-    ],
-  },
+    pricing: "💰 Mise en place : 1000€ | Leads qualifiés : 0,05€/lead (prix dégressif dès 10K leads)."
+  }
 ];
 
 const PresentationInfra = () => {
@@ -77,11 +60,11 @@ const PresentationInfra = () => {
         </motion.div>
 
         {/* Branches vers les infrastructures */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
           {infrastructures.map((infra, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-gray-900 p-6 rounded-xl shadow-lg border border-white/10 max-w-xs"
+              className="flex flex-col items-center bg-gray-900 p-6 rounded-xl shadow-lg border border-white/10 max-w-sm mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.3, duration: 1 }}
@@ -91,13 +74,18 @@ const PresentationInfra = () => {
               <p className="text-gray-300 text-sm mt-2 pb-4 mb-4 border-b border-teal-400">{infra.description}</p>
 
               {/* Liste des avantages */}
-              <ul className="mt-4 text-left text-sm text-gray-300 space-y-6">
+              <ul className="mt-4 text-left text-sm text-gray-300 space-y-4">
                 {infra.points.map((point, i) => (
                   <li key={i} className="flex items-center gap-4">
                     ✅ {point}
                   </li>
                 ))}
               </ul>
+
+              {/* Section Prix */}
+              <div className="mt-4 bg-teal-500 text-black px-4 py-2 rounded-lg font-bold text-sm">
+                {infra.pricing}
+              </div>
             </motion.div>
           ))}
         </div>
