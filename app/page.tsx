@@ -3,9 +3,9 @@ import Chatbot from "@/components/ChatBot";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import { BentoGridThirdDemo } from "@/components/GridTemplate";
 import Hero from "@/components/Hero";
-import ServicesList from "@/components/PresentationAgent";
-import { TabsDemo } from "@/components/TabsDemo";
+import AppleCardsCarouselDemo from "@/components/PresentationAgent";
 import Tools from "@/components/Tools";
 import { FloatingNav } from "@/components/ui/floatingNav";
 import WorkTogether from "@/components/WorkTogether";
@@ -17,11 +17,11 @@ export default function Home() {
       <div className=" w-full">
         <FloatingNav navItems={navItems}/>
         <Hero />
-        <ServicesList />
+        <BentoGridThirdDemo />
         <Features />
         <WorkTogether />
         <AppointmentAndQuestions />
-        <TabsDemo />
+        <AppleCardsCarouselDemo />
         <Contact />
         <Footer />
         <Tools />

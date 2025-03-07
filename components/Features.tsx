@@ -9,10 +9,6 @@ const Features = () => {
     <div className="py-20" id="presentation">  
       <div className="max-w-7xl mx-auto px-5 sm:px-10">
 
-        <p className="text-center text-2xl sm:text-3xl text-white mb-20">
-        Optez pour une <span className="text-purple">infrastructure optimisée</span> pour automatiser, analyser et maximiser vos performances.
-        </p>
-
         <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6">
           Ce que nous vous <span className="text-purple">apportons</span>
         </h2>
@@ -22,7 +18,7 @@ const Features = () => {
           {/* Bénéfice 1 - Visibilité et acquisition clients */}
           <div className="flex justify-center">
             <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-200 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 
                 {/* Titre */}
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
@@ -58,7 +54,7 @@ const Features = () => {
           {/* Bénéfice 2 - Automatisation et IA */}
           <div className="flex justify-center">
             <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-200 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
                   Gagnez du temps grâce à <span className="text-purple">l&apos;Automatisation & l&apos;IA</span>
                 </CardItem>
@@ -85,7 +81,7 @@ const Features = () => {
           {/* Bénéfice 3 - Analyse et exploitation des données */}
           <div className="flex justify-center">
             <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-200 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
                   Exploitez vos <span className="text-purple">Données intelligemment</span>
                 </CardItem>
@@ -111,7 +107,7 @@ const Features = () => {
           {/* Bénéfice 4 - Prospection & conversion clients */}
           <div className="flex justify-center">
             <CardContainer className="relative w-full">
-              <CardBody className="bg-gray-50 relative group/card dark:bg-black-300 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:bg-black-200 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
                   Convertissez plus de <span className="text-purple">prospects en clients</span>
                 </CardItem>

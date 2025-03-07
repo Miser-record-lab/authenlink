@@ -8,7 +8,7 @@ import { FaCalendarAlt, FaPlayCircle } from 'react-icons/fa';
 const Hero = () => {
 
   return (
-    <div className="pb-10 pt-20" id="acceuil">
+    <div className="pb-10 pt-20 mb-20" id="acceuil">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
