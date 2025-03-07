@@ -92,7 +92,7 @@ const Contact = () => {
 
   return (
     <section className="w-full pt-40 z-[1000]" id="contact">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-0 md:px-6">
         <h2 className="text-center text-4xl font-bold mb-8">Nous <span className="text-purple">Contacter</span></h2>
         <form onSubmit={handleSubmit} className="space-y-6 bg-black-100 p-8 rounded-lg shadow-lg ">
           <div className="flex space-x-4">
@@ -103,7 +103,7 @@ const Contact = () => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full p-3 border border-white/[0.2] rounded-md"
+                className="w-full p-3 border border-white/[0.2] rounded-md bg-black-200"
                 placeholder="Votre prénom"
               />
               {formErrors.firstName && <p className="text-red-500 text-sm">{formErrors.firstName}</p>}
@@ -115,7 +115,7 @@ const Contact = () => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                className="w-full p-3 border border-white/[0.2] rounded-md"
+                className="w-full p-3 border border-white/[0.2] rounded-md bg-black-200"
                 placeholder="Votre nom"
               />
               {formErrors.lastName && <p className="text-red-500 text-sm">{formErrors.lastName}</p>}
@@ -128,7 +128,7 @@ const Contact = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border border-white/[0.2] rounded-md"
+              className="w-full p-3 border border-white/[0.2] rounded-md bg-black-200"
               placeholder="Votre adresse e-mail"
             />
             {formErrors.email && <p className="text-red-500 text-sm">{formErrors.email}</p>}
@@ -139,7 +139,7 @@ const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border border-white/[0.2] rounded-md"
+              className="w-full p-3 border border-white/[0.2] rounded-md bg-black-200"
               rows={6}
               placeholder="Votre message"
             />

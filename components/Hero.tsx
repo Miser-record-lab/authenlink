@@ -8,7 +8,7 @@ import { FaCalendarAlt, FaPlayCircle } from 'react-icons/fa';
 const Hero = () => {
 
   return (
-    <div className="pb-10 pt-20 mb-20" id="acceuil">
+    <div className="pb-10 pt-20 mb-10 md:mb-20" id="acceuil">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -37,7 +37,7 @@ const Hero = () => {
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 mb-5">
             Marketing & data automation
           </p>
-          <p className="text-center text-[40px] md:text-5xl lg:text-6xl">
+          <p className="text-center text-[40px] md:text-5xl lg:text-6xl items-center justify-center mb-10">
             Création de solution d&apos;IA personnalisées <br /> pour vos services <br />
             <FlipWords
               words={["Marketing", "Data", "Ressources Humaines", "Service Client", "Finance", "Opérations"]}
@@ -57,7 +57,7 @@ const Hero = () => {
               {/* Bouton Prendre rendez-vous */}
               <a href="#rendez-vous">
                 <MagicButton
-                  title="Prendre rendez-vous"
+                  title="Rendez-vous"
                   icon={<FaCalendarAlt />} // Icône calendrier pour indiquer la prise de rendez-vous
                   position="right"
                 />
