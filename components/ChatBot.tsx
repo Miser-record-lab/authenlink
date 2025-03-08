@@ -71,7 +71,7 @@ const Chatbot = () => {
   return (
     <>
       <div
-        className="md:fixed  bottom-4 right-4 z-50 w-12 h-12 bg-black-200 text-white rounded-full sm:flex hidden justify-center items-center cursor-pointer border border-white/20"
+        className="md:fixed  bottom-4 right-4 z-50 w-14 h-14 bg-black-200 text-white rounded-full sm:flex hidden justify-center items-center cursor-pointer border border-white/20"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FaComment className="w-6 h-6" />
