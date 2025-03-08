@@ -1,14 +1,13 @@
-import AppointmentAndQuestions from "@/components/AandQ";
+
 import Chatbot from "@/components/ChatBot";
-import Contact from "@/components/Contact";
+import ContactAndAppointment from "@/components/ContactAndAppointment";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import { BentoGridThirdDemo } from "@/components/GridTemplate";
 import Hero from "@/components/Hero";
-import AppleCardsCarouselDemo from "@/components/PresentationAgent";
 import Tools from "@/components/Tools";
 import { FloatingNav } from "@/components/ui/floatingNav";
-import WorkTogether from "@/components/WorkTogether";
+import Experience from "@/components/WayToWork";
 import { navItems  } from "@/data/navbar";
 
 export default function Home() {
@@ -19,10 +18,8 @@ export default function Home() {
         <Hero />
         <BentoGridThirdDemo />
         <Features />
-        <WorkTogether />
-        <AppointmentAndQuestions />
-        <AppleCardsCarouselDemo />
-        <Contact />
+        <Experience />
+        <ContactAndAppointment />
         <Footer />
         <Tools />
         <Chatbot />
