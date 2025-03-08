@@ -1,3 +1,4 @@
+"use client"
 
 import Chatbot from "@/components/ChatBot";
 import ContactAndAppointment from "@/components/ContactAndAppointment";
@@ -11,10 +12,11 @@ import Experience from "@/components/WayToWork";
 import { navItems  } from "@/data/navbar";
 
 export default function Home() {
+
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className=" w-full">
-        <FloatingNav navItems={navItems}/>
+        <FloatingNav navItems={navItems} />
         <Hero />
         <BentoGridThirdDemo />
         <Features />

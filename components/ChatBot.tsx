@@ -70,33 +70,25 @@ const Chatbot = () => {
 
   return (
     <>
-      {/* Icône ronde pour le chatbot */}
       <div
-        className="fixed bottom-4 right-4 z-50 w-12 h-12 bg-black text-white rounded-full flex justify-center items-center cursor-pointer border border-white/20"
+        className="md:fixed  bottom-4 right-4 z-50 w-12 h-12 bg-black-200 text-white rounded-full sm:flex hidden justify-center items-center cursor-pointer border border-white/20"
         onClick={() => setIsOpen(!isOpen)}
       >
         <FaComment className="w-6 h-6" />
       </div>
 
-      {/* Chatbot widget */}
       {isOpen && (
-        <div className="fixed bottom-4 right-4 z-50 w-[90%] max-w-sm h-[70%] sm:h-[500px] bg-gray-800 text-white rounded-lg shadow-lg border border-white/20">
+        <div className="fixed bottom-20 right-4 z-1000 w-[90%] max-w-sm h-[70%] sm:h-[500px] bg-black-200 text-white rounded-lg shadow-lg border border-white/20 flex flex-col">
           {/* Header */}
           <div className="flex items-center justify-between bg-black p-3 rounded-t-lg border-b border-white/20">
             <div className="flex items-center space-x-2">
               <Image src="/favicon.ico" alt="logo" width={30} height={30} />
               <span className="font-semibold text-white text-sm sm:text-base">AuthenLink</span>
             </div>
-            <button
-              className="text-xs sm:text-sm text-white hover:font-semibold"
-              onClick={() => setIsOpen(false)}
-            >
-              Fermer
-            </button>
           </div>
 
           {/* Messages */}
-          <div className="h-[60%] sm:h-[70%] overflow-y-auto p-2 space-y-2 text-sm sm:text-base">
+          <div className="flex-1 overflow-y-auto p-2 space-y-2 text-sm sm:text-base">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -121,20 +113,22 @@ const Chatbot = () => {
           </div>
 
           {/* Input */}
-          <div className="flex items-center p-2">
-            <input
-              type="text"
-              className="flex-1 p-2 rounded-l-lg border border-white/20 bg-white text-black focus:outline-none"
-              placeholder="Tapez votre message..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-            />
-            <button
-              className="p-2 bg-black rounded-r-lg text-white hover:bg-black/80 border border-white/20"
-              onClick={handleSendMessage}
-            >
-              Envoyer
-            </button>
+          <div className="p-2 border-t border-white/20">
+            <div className="flex items-center">
+              <input
+                type="text"
+                className="flex-1 p-2 rounded-l-lg border border-white/20 bg-white text-black focus:outline-none"
+                placeholder="Tapez votre message..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+              />
+              <button
+                className="p-2 bg-black rounded-r-lg text-white hover:bg-black/80 border border-white/20"
+                onClick={handleSendMessage}
+              >
+                Envoyer
+              </button>
+            </div>
           </div>
         </div>
       )}

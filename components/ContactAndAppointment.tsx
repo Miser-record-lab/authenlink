@@ -101,7 +101,7 @@ const ContactAndAppointment = () => {
     <section className="w-full py-20  text-white" id="Rendez-vous">
       <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Formulaire de contact */}
-        <div className="space-y-6 p-8 rounded-lg shadow-lg">
+        <div className="space-y-6 sm:p-8 p-2 rounded-lg shadow-lg">
           <h2 className="text-center text-4xl font-bold mb-8">Nous <span className="text-purple">Contacter</span></h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="flex space-x-4">
@@ -165,7 +165,7 @@ const ContactAndAppointment = () => {
         </div>
 
         {/* Section de rendez-vous avec Calendly */}
-        <div className="p-8 rounded-lg shadow-lg flex flex-col justify-center">
+        <div className="sm:p-8 p-2 rounded-lg shadow-lg flex flex-col justify-center">
           <h2 className="text-center text-3xl sm:text-4xl font-bold mb-8">
             Prendre <span className="text-purple">Rendez-vous</span>
           </h2>
