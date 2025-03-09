@@ -7,13 +7,13 @@ import Image from "next/image";
 const Features = () => {
   return (
     <div className="py-20" id="presentation">  
-      <div className="max-w-7xl mx-auto px-5 sm:px-10">
+      <div className="max-w-7xl sm:mx-auto sm:px-10">
 
         <h2 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6">
           Ce que nous vous <span className="text-purple">apportons</span>
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 sm:gap-10 gap-6 justify-center items-center">
 
           {/* Bénéfice 1 - Visibilité et acquisition clients */}
           <div className="flex justify-center">

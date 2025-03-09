@@ -8,7 +8,7 @@ import { FaCalendarAlt, FaPlayCircle } from 'react-icons/fa';
 const Hero = () => {
 
   return (
-    <div className="pb-10 pt-20 mb-10 md:mb-20" id="acceuil">
+    <div className="pb-10 pt-20 mb-4 md:mb-16" id="acceuil">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -37,8 +37,8 @@ const Hero = () => {
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 mb-5">
             Marketing & data automation
           </p>
-          <p className="text-center text-[40px] md:text-5xl lg:text-6xl items-center justify-center mb-10">
-            Création de solution d&apos;IA personnalisées <br /> pour vos services <br />
+          <p className="text-center text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-normal  items-center justify-center mb-4 font-bold md:font-normal">
+            Création de solution d&apos;IA personnalisées <br className="hidden sm:block" /> pour vos services <br className="hidden sm:block" />
             <FlipWords
               words={["Marketing", "Data", "Ressources Humaines", "Service Client", "Finance", "Opérations"]}
               duration={3000} // Durée du changement des mots // Vous pouvez ajouter des classes CSS ici
