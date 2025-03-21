@@ -1,11 +1,11 @@
 "use client"
 
-import Chatbot from "@/components/ChatBot";
 import ContactAndAppointment from "@/components/ContactAndAppointment";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import { BentoGridThirdDemo } from "@/components/GridTemplate";
 import Hero from "@/components/Hero";
+import N8nChat from "@/components/N8nChat";
 import Tools from "@/components/Tools";
 import { FloatingNav } from "@/components/ui/floatingNav";
 import Experience from "@/components/WayToWork";
@@ -24,7 +24,7 @@ export default function Home() {
         <ContactAndAppointment />
         <Footer />
         <Tools />
-        <Chatbot />
+        <N8nChat />
       </div>
     </main>
   );
