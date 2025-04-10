@@ -78,7 +78,7 @@ const DevWebCards = () => {
               Création de landing pages modernes & efficaces pour capter vos prospects.
               Optimisation du tunnel de conversion, du SEO, et accompagnement sur le contenu.
             </p>
-            <div className="pt-4 flex flex-wrap justify-center gap-4">
+            <div className="pt-4 flex flex-wrap justify-center">
               <AnimatedTooltip items={toolsLanding} />
             </div>
           </div>
@@ -95,7 +95,7 @@ const DevWebCards = () => {
               Conception d&apos;applications internes en no-code (Bubble) ou en code, avec déploiement
               front-end et back-end. Base de données, UI & automatisations incluses.
             </p>
-            <div className="pt-4 flex flex-wrap justify-center gap-4">
+            <div className="pt-4 flex flex-wrap justify-center">
               <AnimatedTooltip items={toolsApps} />
             </div>
           </div>
