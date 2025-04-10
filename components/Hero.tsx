@@ -32,21 +32,21 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center text-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80 mb-5">
+          <p className="uppercase tracking-widest text-xs text-blue-100 max-w-80 mb-5">
             Marketing & data automation
           </p>
 
-          <p className="text-center text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-normal font-bold md:font-normal">
+          <p className="text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-normal font-bold md:font-normal">
             Création de solution d&apos;IA personnalisées <br className="hidden sm:block" /> pour vos services <br className="hidden sm:block" />
             <FlipWords
               words={["Marketing", "Data", "Ressources Humaines", "Service Client", "Finance", "Opérations"]}
               duration={3000}
             />
           </p>
-
+          
           {/* Deux boutons côte à côte */}
           <div className="flex flex-wrap justify-center gap-4 mt-10">
-            <a href="/multicanal">
+            <a href="/multicanal" className="min-w-[230px]">
               <MagicButton
                 title="Prospection multicanal"
                 icon={<TbMessageShare />}
@@ -54,7 +54,7 @@ const Hero = () => {
               />
             </a>
 
-            <a href="/agents">
+            <a href="/agents" className="min-w-[230px]">
               <MagicButton
                 title="Agents IA & Dev Web"
                 icon={<TbRobot />}
@@ -63,9 +63,14 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Bouton Prendre rendez-vous en dessous */}
-          <div className="">
-            <a href="#rendez-vous">
+          {/* Bouton Prendre rendez-vous */}
+          <div className="lg:mt-0 mt-4 min-w-[230px]">
+            <a
+              href="https://calendly.com/authenlink/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full"
+            >
               <MagicButton
                 title="Prendre rendez-vous"
                 icon={<FaCalendarAlt />}
