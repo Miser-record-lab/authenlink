@@ -19,9 +19,9 @@ const tools = [
     href: "/mautic",
   },
   {
-    title: "Grafana",
+    title: "Apify",
     icon: <FaChartLine className="text-black dark:text-white" />,  // Icône pour surveillance / graphique
-    href: "/grafana",
+    href: "/apify",
   },
   {
     title: "Bubble",

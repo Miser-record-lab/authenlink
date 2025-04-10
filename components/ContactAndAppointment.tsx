@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';  
 import 'react-toastify/dist/ReactToastify.css'; 
 
 const ContactAndAppointment = () => {
-  // State et logique pour le formulaire de contact (repris du composant Contact)
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -54,18 +53,12 @@ const ContactAndAppointment = () => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
-
       try {
         const response = await fetch("https://n8n-railway-custom-production-743f.up.railway.app/webhook/message-website", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            message: formData.message,
+            ...formData,
             date: new Date().toISOString(),
           }),
         });
@@ -80,33 +73,19 @@ const ContactAndAppointment = () => {
         console.error("Erreur:", error);
         toast.error("Erreur lors de l'envoi. Essayez à nouveau.");
       }
-
       setIsSubmitting(false);
     }
   };
 
-  // Logique pour le rendez-vous (repris du composant AppointmentAndQuestions)
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
-    <section className="w-full py-20  text-white" id="Rendez-vous">
-      <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Formulaire de contact */}
+    <section className="w-full py-20 text-white">
+      <div className="max-w-4xl mx-auto px-5 md:px-10">
         <div className="space-y-6 sm:p-8 p-2 rounded-lg shadow-lg">
           <h2 className="text-center text-4xl font-bold mb-8">Nous <span className="text-purple">Contacter</span></h2>
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="flex space-x-4">
-              <div className="w-1/2">
-                <label className="block text-lg font-medium text-white mb-2">Prénom</label>
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+              <div className="w-full">
+                <label className="block text-lg font-medium mb-2">Prénom</label>
                 <input
                   type="text"
                   name="firstName"
@@ -117,8 +96,8 @@ const ContactAndAppointment = () => {
                 />
                 {formErrors.firstName && <p className="text-red-500 text-sm">{formErrors.firstName}</p>}
               </div>
-              <div className="w-1/2">
-                <label className="block text-lg font-medium text-white mb-2">Nom</label>
+              <div className="w-full">
+                <label className="block text-lg font-medium mb-2">Nom</label>
                 <input
                   type="text"
                   name="lastName"
@@ -131,7 +110,7 @@ const ContactAndAppointment = () => {
               </div>
             </div>
             <div>
-              <label className="block text-lg font-medium text-white mb-2">Adresse e-mail</label>
+              <label className="block text-lg font-medium mb-2">Adresse e-mail</label>
               <input
                 type="email"
                 name="email"
@@ -143,7 +122,7 @@ const ContactAndAppointment = () => {
               {formErrors.email && <p className="text-red-500 text-sm">{formErrors.email}</p>}
             </div>
             <div>
-              <label className="block text-lg font-medium text-white mb-2">Message</label>
+              <label className="block text-lg font-medium mb-2">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -164,22 +143,7 @@ const ContactAndAppointment = () => {
           </form>
         </div>
 
-        {/* Section de rendez-vous avec Calendly */}
-        <div className="sm:p-8 p-2 rounded-lg shadow-lg flex flex-col justify-center">
-          <h2 className="text-center text-3xl sm:text-4xl font-bold mb-8">
-            Prendre <span className="text-purple">Rendez-vous</span>
-          </h2>
-          <p className="text-center text-lg text-white mb-12">
-            Nous échangerons pendant 30 minutes sur les <span className="text-purple">besoins</span> de votre entreprise et les <span className="text-purple">actions</span> que vous souhaiteriez mettre en place.
-          </p>
-          <div className="flex justify-center">
-            <div
-              className="calendly-inline-widget border border-white/[0.2] rounded-lg shadow-lg overflow-hidden"
-              data-url="https://calendly.com/authenlink/30min?hide_event_type_details=1&hide_gdpr_banner=1"
-              style={{ minWidth:"340px", maxHeight: "700px" , minHeight: "500px"}}
-            ></div>
-          </div>
-        </div>
+        {/* Section de rendez-vous en dessous */}
       </div>
 
       <ToastContainer

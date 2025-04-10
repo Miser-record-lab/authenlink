@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { BentoGridThirdDemo } from "@/components/GridTemplate";
 import Hero from "@/components/Hero";
 import N8nChat from "@/components/N8nChat";
+import ServicesCTA from "@/components/ServicesCTA";
 import Tools from "@/components/Tools";
 import { FloatingNav } from "@/components/ui/floatingNav";
 import Experience from "@/components/WayToWork";
@@ -19,6 +20,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <BentoGridThirdDemo />
+        <ServicesCTA />
         <Features />
         <Experience />
         <ContactAndAppointment />
