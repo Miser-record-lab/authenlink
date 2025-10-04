@@ -1,38 +1,43 @@
-"use client"
+"use client";
 
-import React from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/MovingBorders"
-import { FaRobot, FaEnvelopeOpenText } from "react-icons/fa"
-import MagicButton from "@/components/ui/MagicButton"
+import Link from "next/link";
+import { Button } from "@/components/ui/MovingBorders";
+import { FaRobot, FaEnvelopeOpenText } from "react-icons/fa";
+import MagicButton from "@/components/ui/MagicButton";
 
 const offers = [
   {
     id: 1,
     iconBig: <FaEnvelopeOpenText className="text-5xl text-white" />,
     icon: <FaEnvelopeOpenText className="text-2xl text-white" />,
-    title: "Prospection Multicanal",
-    desc: "De la data au RDV, nous créons des campagnes multicanales personnalisées, scalables et efficaces.",
+    title: "Infrastructure Marketing",
+    desc: "Solutions clés en main pour votre acquisition : campagnes multicanales, génération de leads qualifiés et automatisation de votre prospection.",
     href: "/multicanal",
   },
   {
     id: 2,
     iconBig: <FaRobot className="text-5xl text-white" />,
     icon: <FaRobot className="text-2xl text-white" />,
-    title: "Agents IA & Dev Web",
-    desc: "Nous automatisons vos process, nous développons vos agents IA et vos outils personnalisés (landing page, app, etc.).",
+    title: "Agents IA & Automatisation",
+    desc: "Optimisation de vos processus métiers grâce à l'intelligence artificielle : agents conversationnels, automatisation des tâches et développement d'outils sur mesure.",
     href: "/agents",
   },
-]
+];
 
 const ServiceCTA = () => {
   return (
-    <section className="py-20 max-w-7xl mx-auto flex flex-col items-center">
+    <section
+      className="py-20 max-w-7xl mx-auto flex flex-col items-center"
+      id="services"
+    >
       <h2 className="text-center text-4xl font-bold text-white mb-8">
-        Nos <span className="text-purple">deux offres principales</span>
+        <span className="text-purple">Deux expertises</span> au service de votre
+        croissance
       </h2>
       <p className="text-center text-lg text-white mb-12">
-        Automatisation, IA, prospection : deux approches complémentaires pour faire passer votre business au niveau supérieur.
+        Intelligence artificielle et marketing digital : des solutions
+        innovantes pour transformer vos opérations et accélérer votre
+        développement.
       </p>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10 justify-center items-center">
@@ -62,9 +67,7 @@ const ServiceCTA = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServiceCTA
-
-
+export default ServiceCTA;

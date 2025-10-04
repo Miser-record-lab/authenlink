@@ -1,40 +1,82 @@
-"use client"
+"use client";
 
-import { FloatingNav } from "@/components/ui/floatingNav"
-import { navItemsAgents } from "@/data/navItemsAgents"
-import Tools from "@/components/Tools"
-import N8nChat from "@/components/N8nChat"
-import HeroAgents from "@/components/agents/HeroAgents"
-import AgentServices from "@/components/agents/AgentServices"
-import FooterAgents from "@/components/agents/FooterAgents"
-import DevWebCards from "@/components/agents/DevWebCard"
+import {
+  Navbar,
+  NavBody,
+  NavItems,
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
+  NavbarLogo,
+  NavbarButton,
+} from "@/components/ui/resizable-navbar";
+import { navItemsAgents } from "@/data/navItemsAgents";
+import Tools from "@/components/Tools";
+import HeroAgents from "@/components/agents/HeroAgents";
+import AgentServices from "@/components/agents/AgentServices";
+import FooterAgents from "@/components/agents/FooterAgents";
+import DevWebCards from "@/components/agents/DevWebCard";
+import { TracingBeam } from "@/components/ui/tracing-beam";
+import { useState } from "react";
 
 export default function AgentsPage() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <FloatingNav navItems={navItemsAgents} />
+      <Navbar>
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItemsAgents} />
+          <NavbarButton href="#rendez-vous" variant="dark">
+            Rendez-vous
+          </NavbarButton>
+        </NavBody>
+        <MobileNav>
+          <MobileNavHeader>
+            <NavbarLogo />
+            <MobileNavToggle
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </MobileNavHeader>
+          <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
+            {navItemsAgents.map((item, idx) => (
+              <a
+                key={idx}
+                href={item.link}
+                className="text-neutral-600 dark:text-neutral-300"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+          </MobileNavMenu>
+        </MobileNav>
+      </Navbar>
+      <TracingBeam>
+        <div className="w-full">
+          <HeroAgents />
 
-      <div className="w-full">
-        <HeroAgents />
+          {/* Section Agents IA */}
+          <section id="agents-ia">
+            <AgentServices />
+          </section>
 
-        {/* Section Agents IA */}
-        <section id="agents-ia">
-          <AgentServices />
-        </section>
+          {/* Section Développement Web */}
+          <section id="developpement">
+            <DevWebCards />
+          </section>
 
-        {/* Section Développement Web */}
-        <section id="developpement">
-          <DevWebCards />
-        </section>
+          {/* Section Prise de RDV */}
+          <section id="rendez-vous">
+            <FooterAgents />
+          </section>
 
-        {/* Section Prise de RDV */}
-        <section id="rendez-vous">
-          <FooterAgents />
-        </section>
-
-        <Tools />
-        <N8nChat />
-      </div>
+          <Tools />
+        </div>
+      </TracingBeam>
     </main>
-  )
+  );
 }

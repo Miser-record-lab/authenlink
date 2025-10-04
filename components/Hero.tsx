@@ -1,9 +1,7 @@
-import React from 'react';
-import { FlipWords } from './ui/flip-words';
-import MagicButton from './ui/MagicButton';
-import { Spotlight } from './ui/Spotlight';
-import { FaCalendarAlt } from 'react-icons/fa';
-import { TbMessageShare, TbRobot } from 'react-icons/tb';
+import { FlipWords } from "./ui/flip-words";
+import MagicButton from "./ui/MagicButton";
+import { Spotlight } from "./ui/Spotlight";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -37,14 +35,23 @@ const Hero = () => {
           </p>
 
           <p className="text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-normal font-bold md:font-normal">
-            Création de solution d&apos;IA personnalisées <br className="hidden sm:block" /> pour vos services <br className="hidden sm:block" />
+            Création de solution d&apos;IA personnalisées{" "}
+            <br className="hidden sm:block" /> pour vos services{" "}
+            <br className="hidden sm:block" />
             <FlipWords
-              words={["Marketing", "Data", "Ressources Humaines", "Service Client", "Finance", "Opérations"]}
+              words={[
+                "Marketing",
+                "Data",
+                "Ressources Humaines",
+                "Service Client",
+                "Finance",
+                "Opérations",
+              ]}
               duration={3000}
             />
           </p>
-          
-          {/* Deux boutons côte à côte */}
+
+          {/* Deux boutons côte à côte
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <a href="/multicanal" className="min-w-[230px]">
               <MagicButton
@@ -61,7 +68,7 @@ const Hero = () => {
                 position="left"
               />
             </a>
-          </div>
+          </div> */}
 
           {/* Bouton Prendre rendez-vous */}
           <div className="lg:mt-0 mt-4 min-w-[230px]">

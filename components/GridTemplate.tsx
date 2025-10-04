@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React from "react";
 import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
 import {
   IconBoxAlignRightFilled,
@@ -15,23 +14,23 @@ import Image from "next/image";
 export function BentoGridThirdDemo() {
   return (
     <div>
-        <h2 className="max-w-7xl pl-4 mx-auto text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-200 text-center mb-20">
-        Des services <span className="text-purple">Sur-Mesure :</span>
+      <h2 className="max-w-7xl pl-4 mx-auto text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-200 text-center mb-20">
+        Intégrez des services <span className="text-purple">Sur-Mesure :</span>{" "}
+        pour développer votre croissance et réduire vos coûts.
       </h2>
 
-    
-    <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] mb-20 bg-black>">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={cn("[&>p:text-lg]", item.className)}
-          icon={item.icon}
-        />
-      ))}
-    </BentoGrid>
+      <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] mb-20 bg-black>">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            className={cn("[&>p:text-lg]", item.className)}
+            icon={item.icon}
+          />
+        ))}
+      </BentoGrid>
     </div>
   );
 }
@@ -287,14 +286,17 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
-          Quel outil utiliser pour créer un agent IA qui s&apos;occupera de ma boite mail ?
+          Quel outil utiliser pour créer un agent IA qui s&apos;occupera de ma
+          boite mail ?
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Utilisez n8n et un provider mail. </p>
+        <p className="text-xs text-neutral-500">
+          Utilisez n8n et un provider mail.{" "}
+        </p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
       </motion.div>
     </motion.div>
@@ -305,7 +307,8 @@ const items = [
     title: "Implémentation d’Agent IA",
     description: (
       <span className="text-sm">
-        Déployez des agents IA capables de répondre aux prospects, gérer le support client et optimiser votre productivité en entreprise.
+        Déployez des agents IA capables de répondre aux prospects, gérer le
+        support client et optimiser votre productivité en entreprise.
       </span>
     ),
     header: <SkeletonOne />,
@@ -316,7 +319,8 @@ const items = [
     title: "Prospection & Cold Emailing",
     description: (
       <span className="text-sm">
-        Optimisez votre prospection grâce à des campagnes d’emailing automatisées et ultra-ciblées, intégrées avec vos outils CRM.
+        Optimisez votre prospection grâce à des campagnes d’emailing
+        automatisées et ultra-ciblées, intégrées avec vos outils CRM.
       </span>
     ),
     header: <SkeletonTwo />,
@@ -327,7 +331,8 @@ const items = [
     title: "Développement Web & Optimisation SEO",
     description: (
       <span className="text-sm">
-        Améliorez votre présence en ligne avec un site optimisé, rapide et structuré pour un référencement naturel efficace.
+        Améliorez votre présence en ligne avec un site optimisé, rapide et
+        structuré pour un référencement naturel efficace.
       </span>
     ),
     header: <SkeletonThree />,
@@ -338,7 +343,8 @@ const items = [
     title: "Scraping & Enrichissement de Données",
     description: (
       <span className="text-sm">
-        Nous vous aidons à trouver des dizaines de milliers de leads potentiels selon vos critères pour vos campagnes Marketing.
+        Nous vous aidons à trouver des dizaines de milliers de leads potentiels
+        selon vos critères pour vos campagnes Marketing.
       </span>
     ),
     header: <SkeletonFour />,
@@ -350,7 +356,8 @@ const items = [
     title: "Accompagnement de vos équipes",
     description: (
       <span className="text-sm">
-        Nous initions vous et vos équipes à utilisez les outils IA les plus performants.
+        Nous initions vous et vos équipes à utilisez les outils IA les plus
+        performants.
       </span>
     ),
     header: <SkeletonFive />,

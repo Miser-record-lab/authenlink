@@ -1,47 +1,112 @@
-import { processSteps } from '@/data/index'
-import React from 'react'
-import { Button } from '../components/ui/MovingBorders'
+"use client";
+
+import React from "react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import {
+  FaCog,
+  FaDatabase,
+  FaCode,
+  FaUserTie,
+  FaChartLine,
+} from "react-icons/fa";
 
 const Experience = () => {
   return (
-    <div className="py-20 max-w-7xl mx-auto flex flex-col items-center" id="Collaboration">
-        <h2 className="text-center text-4xl font-bold text-white mb-8">
-          Une approche <span className="text-purple">100% personnalisée</span> en 5 étapes
-        </h2>
-        <p className="text-center text-lg text-white mb-12">
-          Comprendre en profondeur les besoins de de votre entreprise pour vous aider à scaler grace à des automatisations <span className="text-purple">100% personnalisée</span>.
-        </p>
+    <div
+      className="py-20 max-w-7xl mx-auto flex flex-col items-center px-5"
+      id="Collaboration"
+    >
+      <h2 className="text-center text-4xl font-bold text-white mb-8">
+        Notre <span className="text-purple">méthodologie éprouvée</span> en 5
+        étapes
+      </h2>
+      <p className="text-center text-lg text-white mb-12 max-w-3xl">
+        De l'audit initial au suivi continu : une approche structurée pour
+        transformer vos processus et maximiser votre ROI.
+      </p>
 
-        <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10 justify-center items-center">
-            {processSteps.map((card) => (
-                <Button 
-                    key={card.id}
-                    borderRadius='1.75rem'
-                    duration={Math.floor(Math.random() * 10000) + 10000}
-                    className="flex-1 text-white border-neutral-200 dark:border-slate-800"
-                >
-                    <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-                        <div className='flex-col items-center justify-center gap-4'>
-                            <div className="flex items-center justify-center text-4xl font-bold">
-                                <card.numberIcon className="text-4xl text-white" />
-                            </div>
-                        </div>
-                        
-                        <div className="lg:ms-5">
-                            <h1 className="text-center text-xl md:text-2xl font-bold">
-                                {card.title}
-                            </h1>
-                            <p className="text-start text-white-100 mt-3 font-semibold">
-                                {card.desc}
-                            </p>
-                        </div>
-                    </div>
-                </Button>
-            ))}
-        </div>
+      <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 w-full">
+        <GridItem
+          area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
+          icon={<FaCog className="h-4 w-4 text-black dark:text-neutral-400" />}
+          title="1. Audit Infrastructure"
+          description="Analyse complète de vos outils et processus. Rapport détaillé sous 48h."
+        />
 
+        <GridItem
+          area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
+          icon={
+            <FaDatabase className="h-4 w-4 text-black dark:text-neutral-400" />
+          }
+          title="2. Axes d'amélioration"
+          description="Stratégie avec ROI estimé. Quick wins pour résultats immédiats."
+        />
+
+        <GridItem
+          area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
+          icon={<FaCode className="h-4 w-4 text-black dark:text-neutral-400" />}
+          title="3. Déploiement Sur-Mesure"
+          description="Solutions personnalisées pour vos besoins. Itérations rapides avec tests réels."
+        />
+
+        <GridItem
+          area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
+          icon={
+            <FaUserTie className="h-4 w-4 text-black dark:text-neutral-400" />
+          }
+          title="4. Formation Équipes"
+          description="Formation pratique et documentation complète. Adoption en douceur."
+        />
+
+        <GridItem
+          area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
+          icon={
+            <FaChartLine className="h-4 w-4 text-black dark:text-neutral-400" />
+          }
+          title="5. Optimisation Continue"
+          description="Dashboard KPIs temps réel. Support illimité et évolutions gratuites 6 mois."
+        />
+      </ul>
     </div>
-  )
+  );
+};
+
+interface GridItemProps {
+  area: string;
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
 }
 
-export default Experience
+const GridItem = ({ area, icon, title, description }: GridItemProps) => {
+  return (
+    <li className={`min-h-[14rem] list-none ${area}`}>
+      <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+        <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <div className="w-fit rounded-lg border border-gray-600 p-2">
+              {icon}
+            </div>
+            <div className="space-y-3">
+              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+                {title}
+              </h3>
+              <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+                {description}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+};
+
+export default Experience;

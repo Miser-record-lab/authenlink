@@ -1,18 +1,23 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { FlipWords } from '../ui/flip-words';
-import MagicButton from '../ui/MagicButton';
-import { Spotlight } from '../ui/Spotlight';
-import { FaCalendarAlt } from 'react-icons/fa';
+import { FlipWords } from "../ui/flip-words";
+import MagicButton from "../ui/MagicButton";
+import { Spotlight } from "../ui/Spotlight";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const HeroAgents = () => {
   return (
     <div className="pb-10 pt-20 mb-4 md:mb-16" id="agents">
       {/* Background Spotlights */}
       <div>
-        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
-        <Spotlight className="h-[70vh] w-[50vw] top-10 left-full" fill="purple" />
+        <Spotlight
+          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+          fill="white"
+        />
+        <Spotlight
+          className="h-[70vh] w-[50vw] top-10 left-full"
+          fill="purple"
+        />
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
@@ -38,13 +43,24 @@ const HeroAgents = () => {
             Automatisez vos processus <br />
             et boostez vos équipes avec des <br />
             <FlipWords
-              words={["chatbots", "agents IA", "formulaires intelligents", "Landing Pages", "workflows automatisés", "apps sur-mesure"]}
+              words={[
+                "chatbots",
+                "agents IA",
+                "formulaires intelligents",
+                "Landing Pages",
+                "workflows automatisés",
+                "apps sur-mesure",
+              ]}
               duration={3000}
             />
           </p>
 
           <div className="flex gap-10 mt-6">
-            <a href="https://calendly.com/authenlink/30min" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://calendly.com/authenlink/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MagicButton
                 title="Prendre rendez-vous"
                 icon={<FaCalendarAlt />}
