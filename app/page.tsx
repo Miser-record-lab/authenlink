@@ -26,7 +26,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-1 px-1">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-4 px-4">
       <div className=" w-full">
         <Navbar>
           <NavBody>
