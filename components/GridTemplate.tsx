@@ -14,12 +14,12 @@ import Image from "next/image";
 export function BentoGridThirdDemo() {
   return (
     <div>
-      <h2 className="max-w-7xl pl-4 mx-auto text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-neutral-200 text-center mb-20">
-        Intégrez des services <span className="text-purple">Sur-Mesure :</span>{" "}
+      <h2 className="max-w-7xl pl-4 mx-auto text-3xl sm:text-4xl font-bold text-foreground text-center mb-20">
+        Intégrez des services <span className="text-primary">Sur-Mesure :</span>{" "}
         pour développer votre croissance et réduire vos coûts.
       </h2>
 
-      <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] mb-20 bg-black>">
+      <BentoGrid className="max-w-6xl mx-auto md:auto-rows-[20rem] mb-20">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -69,24 +69,24 @@ const SkeletonOne = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
+        className="flex flex-row rounded-full border border-border p-2 items-center space-x-2 bg-card"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="h-6 w-6 rounded-full bg-primary shrink-0" />
+        <div className="w-full bg-muted h-4 rounded-full" />
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
+        className="flex flex-row rounded-full border border-border p-2 items-center space-x-2 w-3/4 ml-auto bg-card"
       >
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+        <div className="w-full bg-muted h-4 rounded-full" />
+        <div className="h-6 w-6 rounded-full bg-primary shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
+        className="flex flex-row rounded-full border border-border p-2 items-center space-x-2 bg-card"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+        <div className="h-6 w-6 rounded-full bg-primary shrink-0" />
+        <div className="w-full bg-muted h-4 rounded-full" />
       </motion.div>
     </motion.div>
   );
@@ -124,7 +124,7 @@ const SkeletonTwo = () => {
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
           }}
-          className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
+          className="flex flex-row rounded-full border border-border p-2 items-center space-x-2 bg-muted w-full h-4"
         ></motion.div>
       ))}
     </motion.div>
@@ -190,7 +190,7 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-card p-4 border border-border flex flex-col items-center justify-center"
       >
         <Image
           src="/testimonial2.jpg"
@@ -199,14 +199,14 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-muted-foreground mt-4">
           Entreprise de services à la consommation
         </p>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Ne pas contacter
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-card p-4 border border-border flex flex-col items-center justify-center">
         <Image
           src="/testimonial1.jpg"
           alt="avatar"
@@ -214,7 +214,7 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-muted-foreground mt-4">
           CTO Saas proptech
         </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
@@ -223,7 +223,7 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-card p-4 border border-border flex flex-col items-center justify-center"
       >
         <Image
           src="/testimonial3.jpg"
@@ -232,7 +232,7 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-muted-foreground mt-4">
           Dirigeante agence Marketing
         </p>
         <p className="border border-blue-500 bg-orange-100 dark:bg-orange-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
@@ -276,7 +276,7 @@ const SkeletonFive = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
+        className="flex flex-row rounded-2xl border border-border p-2 items-start space-x-2 bg-card"
       >
         <Image
           src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
@@ -285,71 +285,74 @@ const SkeletonFive = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="text-xs text-neutral-500">
+        <p className="text-xs text-muted-foreground">
           Quel outil utiliser pour créer un agent IA qui s&apos;occupera de ma
           boite mail ?
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
+        className="flex flex-row rounded-full border border-border p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-card"
       >
-        <p className="text-xs text-neutral-500">
+        <p className="text-xs text-muted-foreground">
           Utilisez n8n et un provider mail.{" "}
         </p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+        <div className="h-6 w-6 rounded-full bg-primary shrink-0" />
       </motion.div>
     </motion.div>
   );
 };
 const items = [
   {
-    title: "Implémentation d’Agent IA",
+    title: "Agents IA Conversationnels",
     description: (
       <span className="text-sm">
-        Déployez des agents IA capables de répondre aux prospects, gérer le
-        support client et optimiser votre productivité en entreprise.
+        Réduisez de <strong>70% le temps de réponse</strong> client et gérez
+        jusqu&apos;à <strong>500 conversations simultanées</strong> avec des
+        agents IA disponibles 24/7.
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconClipboardCopy className="h-4 w-4 text-muted-foreground" />,
   },
   {
-    title: "Prospection & Cold Emailing",
+    title: "Génération de Leads Qualifiés",
     description: (
       <span className="text-sm">
-        Optimisez votre prospection grâce à des campagnes d’emailing
-        automatisées et ultra-ciblées, intégrées avec vos outils CRM.
+        Générez entre <strong>100 et 1000+ nouveaux leads par mois</strong>{" "}
+        grâce à nos campagnes multicanales automatisées et ciblées.
       </span>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconFileBroken className="h-4 w-4 text-muted-foreground" />,
   },
   {
-    title: "Développement Web & Optimisation SEO",
+    title: "Sites Web Haute Performance",
     description: (
       <span className="text-sm">
-        Améliorez votre présence en ligne avec un site optimisé, rapide et
-        structuré pour un référencement naturel efficace.
+        Augmentez votre trafic organique de <strong>200%</strong> et améliorez
+        votre taux de conversion de <strong>35%</strong> avec un site optimisé
+        SEO.
       </span>
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className="h-4 w-4 text-muted-foreground" />,
   },
   {
-    title: "Scraping & Enrichissement de Données",
+    title: "Extraction & Enrichissement Données",
     description: (
       <span className="text-sm">
-        Nous vous aidons à trouver des dizaines de milliers de leads potentiels
-        selon vos critères pour vos campagnes Marketing.
+        Économisez <strong>50h/mois</strong> de recherche manuelle en extrayant
+        et enrichissant automatiquement{" "}
+        <strong>10 000+ prospects qualifiés</strong>.
       </span>
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconTableColumn className="h-4 w-4 text-muted-foreground" />,
   },
 
   {
@@ -357,11 +360,10 @@ const items = [
     description: (
       <span className="text-sm">
         Nous initions vous et vos équipes à utilisez les outils IA les plus
-        performants.
       </span>
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-muted-foreground" />,
   },
 ];

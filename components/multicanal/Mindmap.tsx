@@ -5,10 +5,10 @@ import { FaEnvelope, FaLinkedin, FaSms, FaWhatsapp } from "react-icons/fa"
 import { BsChevronDown } from "react-icons/bs"
 
 const sources = [
-  { name: "Email", icon: <FaEnvelope className="text-xl text-white" /> },
-  { name: "LinkedIn", icon: <FaLinkedin className="text-xl text-white" /> },
-  { name: "WhatsApp", icon: <FaWhatsapp className="text-xl text-white" /> },
-  { name: "SMS", icon: <FaSms className="text-xl text-white" /> },
+  { name: "Email", icon: <FaEnvelope className="text-xl text-primary-foreground" /> },
+  { name: "LinkedIn", icon: <FaLinkedin className="text-xl text-primary-foreground" /> },
+  { name: "WhatsApp", icon: <FaWhatsapp className="text-xl text-primary-foreground" /> },
+  { name: "SMS", icon: <FaSms className="text-xl text-primary-foreground" /> },
 ]
 
 const notes = [
@@ -37,7 +37,7 @@ const MindMapMulticanal = () => {
       className="py-20 px-4 flex flex-col items-center justify-center w-full max-w-6xl mx-auto"
       id="funnel"
     >
-      <h2 className="text-4xl font-bold text-white text-center mb-10">
+      <h2 className="text-4xl font-bold text-foreground text-center mb-10">
         Funnel d&apos;acquisition multicanal
       </h2>
 
@@ -45,15 +45,15 @@ const MindMapMulticanal = () => {
       <div className="flex flex-wrap justify-center items-center gap-6 mb-10">
         {sources.map((src, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="p-4 bg-purple rounded-full mb-2">{src.icon}</div>
-            <span className="text-white text-sm font-medium">{src.name}</span>
+            <div className="p-4 bg-primary rounded-full mb-2">{src.icon}</div>
+            <span className="text-foreground text-sm font-medium">{src.name}</span>
           </div>
         ))}
       </div>
 
       {/* Flèche vers le funnel */}
       <div className="flex justify-center items-center mb-6">
-        <BsChevronDown className="text-white text-3xl animate-bounce" />
+        <BsChevronDown className="text-foreground text-3xl animate-bounce" />
       </div>
 
       {/* Funnel étapes */}
@@ -82,20 +82,20 @@ const MindMapMulticanal = () => {
         ].map((step, i) => (
           <div key={i} className="relative flex justify-center w-full">
             {/* Card principale */}
-            <div className="bg-black-200 p-6 rounded-xl border border-white/[0.2] max-w-md w-full text-center z-10">
-              <h3 className="text-white text-xl font-bold mb-1">{step.title}</h3>
-              <p className="text-white-100 text-sm">{step.desc}</p>
+            <div className="bg-card p-6 rounded-xl border border-border max-w-md w-full text-center z-10">
+              <h3 className="text-foreground text-xl font-bold mb-1">{step.title}</h3>
+              <p className="text-muted-foreground text-sm">{step.desc}</p>
             </div>
 
             {/* Note à droite */}
-            <div className="hidden lg:flex absolute left-1/2 translate-x-[270px] bg-yellow-300/10 text-yellow-100 border border-yellow-300 rounded-lg p-4 shadow-lg max-w-xs w-64 h-full items-center justify-center">
+            <div className="hidden lg:flex absolute left-1/2 translate-x-[270px] bg-accent/50 text-foreground border border-primary/50 rounded-lg p-4 shadow-lg max-w-xs w-64 h-full items-center justify-center">
               <p className="text-sm leading-snug">{step.note}</p>
             </div>
 
             {/* Flèche centrée dessous */}
             {i < 3 && (
               <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">
-                <BsChevronDown className="text-white text-xl" />
+                <BsChevronDown className="text-foreground text-xl" />
               </div>
             )}
           </div>

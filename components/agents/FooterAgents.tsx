@@ -6,9 +6,9 @@ const FooterAgents = () => {
     <footer className="w-full pt-20 pb-1" id="Rendez-vous">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw] text-center">
-          Envie de <span className="text-purple">créer votre agent IA</span> ou d’<span className="text-purple">automatiser</span> vos workflows ?
+          Envie de <span className="text-primary">créer votre agent IA</span> ou d&apos;<span className="text-primary">automatiser</span> vos workflows ?
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center max-w-2xl">
+        <p className="text-muted-foreground md:mt-10 my-5 text-center max-w-2xl">
           Discutons ensemble de vos besoins en automatisation, extraction de données ou assistants IA sur mesure. Une démo ou une stratégie concrète peut démarrer en 30 minutes.
         </p>
 

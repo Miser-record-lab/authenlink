@@ -16,6 +16,7 @@ import {
   MobileNavToggle,
   NavbarLogo,
   NavbarButton,
+  NavbarThemeToggle,
 } from "@/components/ui/resizable-navbar";
 import Experience from "@/components/WayToWork";
 import { navItems } from "@/data/navbar";
@@ -26,23 +27,29 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-4 px-4">
-      <div className=" w-full">
+    <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-4 px-4">
+      <div className="w-full">
         <Navbar>
           <NavBody>
             <NavbarLogo />
             <NavItems items={navItems} />
-            <NavbarButton href="#contact" variant="dark">
-              Rendez-vous
-            </NavbarButton>
+            <div className="flex items-center gap-2">
+              <NavbarThemeToggle />
+              <NavbarButton href="#contact" variant="dark">
+                Rendez-vous
+              </NavbarButton>
+            </div>
           </NavBody>
           <MobileNav>
             <MobileNavHeader>
               <NavbarLogo />
-              <MobileNavToggle
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
-              />
+              <div className="flex items-center gap-3">
+                <NavbarThemeToggle />
+                <MobileNavToggle
+                  isOpen={isOpen}
+                  onClick={() => setIsOpen(!isOpen)}
+                />
+              </div>
             </MobileNavHeader>
             <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
               {navItems.map((item, idx) => (

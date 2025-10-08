@@ -4,10 +4,10 @@
  * Mobile navbar is better positioned at bottom right.
  **/
 
-"use client"
+"use client";
 
 import { cn } from "@/lib/utils";
-import { IconDivide, IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -16,7 +16,6 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import Link from "next/link";
 import { useRef, useState } from "react";
 
 export const FloatingDock = ({
@@ -71,7 +70,7 @@ const FloatingDockMobile = ({
               >
                 <div
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                  className="h-10 w-10 rounded-full bg-background flex items-center justify-center"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
                 </div>
@@ -82,7 +81,7 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+        className="h-10 w-10 rounded-full bg-card flex items-center justify-center"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
@@ -103,7 +102,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-black-100 px-4 pb-3 border dark:border-white/[0.2]",
+        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-background px-4 pb-3 border dark:border-white/[0.2]",
         className
       )}
     >
@@ -136,7 +135,11 @@ function IconContainer({
   const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
   const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
-  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  const widthTransformIcon = useTransform(
+    distance,
+    [-150, 0, 150],
+    [20, 40, 20]
+  );
   const heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
@@ -168,13 +171,13 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div >
+    <div>
       <motion.div
         ref={ref}
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-gray-200 dark:bg-black-100 flex items-center justify-center relative z-100 border dark:border-white/[0.2]"
+        className="aspect-square rounded-full bg-card flex items-center justify-center relative z-100 border dark:border-white/[0.2]"
       >
         <AnimatePresence>
           {hovered && (

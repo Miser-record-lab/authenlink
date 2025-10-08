@@ -88,13 +88,13 @@ const ContactAndAppointment = () => {
   };
 
   return (
-    <section className="w-full py-20 text-white" id="contact">
+    <section className="w-full py-20 text-foreground" id="contact">
       <div className="max-w-4xl mx-auto px-5 md:px-10">
         <h2 className="text-center text-4xl font-bold mb-8">
-          Nous <span className="text-purple">Contacter</span>
+          Nous <span className="text-primary">Contacter</span>
         </h2>
 
-        <div className="shadow-input mx-auto w-full max-w-2xl rounded-none p-4 md:rounded-2xl md:p-8">
+        <div className="shadow-input mx-auto w-full max-w-2xl rounded-none bg-card border p-4 md:rounded-2xl md:p-8">
           <form className="my-8" onSubmit={handleSubmit}>
             <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
               <LabelInputContainer>
@@ -108,7 +108,9 @@ const ContactAndAppointment = () => {
                   onChange={handleChange}
                 />
                 {formErrors.firstName && (
-                  <p className="text-red-500 text-sm">{formErrors.firstName}</p>
+                  <p className="text-destructive text-sm">
+                    {formErrors.firstName}
+                  </p>
                 )}
               </LabelInputContainer>
               <LabelInputContainer>
@@ -122,7 +124,9 @@ const ContactAndAppointment = () => {
                   onChange={handleChange}
                 />
                 {formErrors.lastName && (
-                  <p className="text-red-500 text-sm">{formErrors.lastName}</p>
+                  <p className="text-destructive text-sm">
+                    {formErrors.lastName}
+                  </p>
                 )}
               </LabelInputContainer>
             </div>
@@ -137,7 +141,7 @@ const ContactAndAppointment = () => {
                 onChange={handleChange}
               />
               {formErrors.email && (
-                <p className="text-red-500 text-sm">{formErrors.email}</p>
+                <p className="text-destructive text-sm">{formErrors.email}</p>
               )}
             </LabelInputContainer>
             <LabelInputContainer className="mb-4 ">
@@ -147,11 +151,11 @@ const ContactAndAppointment = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="flex h-32 w-full border-none bg-transparent dark:bg-black-200 text-black dark:text-white shadow-input rounded-md px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-400 dark:placeholder-text-neutral-600 focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-neutral-400 dark:focus-visible:ring-neutral-600 disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-[0px_0px_1px_1px_var(--neutral-700)] group-hover/input:shadow-none transition duration-400"
+                className="flex h-32 w-full border-none bg-background text-foreground shadow-input rounded-md px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-[2px] focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none transition duration-400"
                 placeholder="Votre message"
               />
               {formErrors.message && (
-                <p className="text-red-500 text-sm">{formErrors.message}</p>
+                <p className="text-destructive text-sm">{formErrors.message}</p>
               )}
             </LabelInputContainer>
             <MagicButtonTwo
@@ -161,9 +165,9 @@ const ContactAndAppointment = () => {
             />
           </form>
           <div className="">
-            <p className="mt-20 text-center text-md text-white max-w-3xl mb-4">
+            <p className="mt-20 text-center text-md text-foreground max-w-3xl mb-4">
               Réservez dès maintenant un créneau de{" "}
-              <span className="text-purple">30 minutes</span> et bénéficiez
+              <span className="text-primary">30 minutes</span> et bénéficiez
               d'une analyse personnalisée gratuite. Nos experts et nos systèmes
               automatisés auditeront votre situation en amont pour vous proposer
               des recommandations concrètes et actionnables dès le premier

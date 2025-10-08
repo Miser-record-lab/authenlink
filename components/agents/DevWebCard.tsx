@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { WobbleCard } from "../ui/wobble-card";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 import { FaBolt, FaPenFancy } from "react-icons/fa";
@@ -62,7 +61,7 @@ const toolsApps = [
 const DevWebCards = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
-      <h2 className="text-4xl font-bold text-white text-center mb-10">
+      <h2 className="text-4xl font-bold text-foreground text-center mb-10">
         Développement web & interfaces intelligentes
       </h2>
 
@@ -71,12 +70,15 @@ const DevWebCards = () => {
         <WobbleCard>
           <div className="flex flex-col items-start gap-6">
             <div className="flex items-center gap-3">
-              <FaPenFancy className="text-purple text-2xl" />
-              <h3 className="text-white text-2xl font-semibold">Landing Pages optimisées</h3>
+              <FaPenFancy className="text-primary text-2xl" />
+              <h3 className="text-white text-2xl font-semibold">
+                Landing Pages optimisées
+              </h3>
             </div>
-            <p className="text-white-100 text-sm leading-relaxed">
-              Création de landing pages modernes & efficaces pour capter vos prospects.
-              Optimisation du tunnel de conversion, du SEO, et accompagnement sur le contenu.
+            <p className="text-white text-sm leading-relaxed">
+              Création de landing pages modernes & efficaces pour capter vos
+              prospects. Optimisation du tunnel de conversion, du SEO, et
+              accompagnement sur le contenu.
             </p>
             <div className="pt-4 flex flex-wrap justify-center">
               <AnimatedTooltip items={toolsLanding} />
@@ -88,12 +90,15 @@ const DevWebCards = () => {
         <WobbleCard>
           <div className="flex flex-col items-start gap-6">
             <div className="flex items-center gap-3">
-              <FaBolt className="text-purple text-2xl" />
-              <h3 className="text-white text-2xl font-semibold">Apps internes & outils métiers</h3>
+              <FaBolt className="text-primary text-2xl" />
+              <h3 className="text-white text-2xl font-semibold">
+                Apps internes & outils métiers
+              </h3>
             </div>
-            <p className="text-white-100 text-sm leading-relaxed">
-              Conception d&apos;applications internes en no-code (Bubble) ou en code, avec déploiement
-              front-end et back-end. Base de données, UI & automatisations incluses.
+            <p className="text-white text-sm leading-relaxed">
+              Conception d&apos;applications internes en no-code (Bubble) ou en
+              code, avec déploiement front-end et back-end. Base de données, UI
+              & automatisations incluses.
             </p>
             <div className="pt-4 flex flex-wrap justify-center">
               <AnimatedTooltip items={toolsApps} />

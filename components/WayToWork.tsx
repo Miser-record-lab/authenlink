@@ -16,55 +16,54 @@ const Experience = () => {
       className="py-20 max-w-7xl mx-auto flex flex-col items-center px-5"
       id="Collaboration"
     >
-      <h2 className="text-center text-4xl font-bold text-white mb-8">
-        Notre <span className="text-purple">méthodologie éprouvée</span> en 5
+      <h2 className="text-center text-4xl font-bold text-foreground mb-8">
+        Notre <span className="text-primary">stack technologique</span> en 5
         étapes
       </h2>
-      <p className="text-center text-lg text-white mb-12 max-w-3xl">
-        De l'audit initial au suivi continu : une approche structurée pour
-        transformer vos processus et maximiser votre ROI.
+      <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl">
+        Du code personnalisé à l&apos;analyse de données : une infrastructure technique complète pour automatiser votre prospection et générer des leads qualifiés.
       </p>
 
       <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 w-full">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-          icon={<FaCog className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="1. Audit Infrastructure"
-          description="Analyse complète de vos outils et processus. Rapport détaillé sous 48h."
+          icon={<FaCog className="h-4 w-4 text-foreground" />}
+          title="1. Audit Technique & Stack"
+          description="Analyse de votre architecture CRM, APIs et bases de données. Mapping complet de vos flux de prospection et génération de leads sous 48h."
         />
 
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           icon={
-            <FaDatabase className="h-4 w-4 text-black dark:text-neutral-400" />
+            <FaDatabase className="h-4 w-4 text-foreground" />
           }
-          title="2. Axes d'amélioration"
-          description="Stratégie avec ROI estimé. Quick wins pour résultats immédiats."
+          title="2. Architecture Data & Marketing"
+          description="Conception de pipelines d&apos;automatisation pour la prospection. Stratégie de data enrichment et scoring de leads avec ROI chiffré."
         />
 
         <GridItem
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-          icon={<FaCode className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="3. Déploiement Sur-Mesure"
-          description="Solutions personnalisées pour vos besoins. Itérations rapides avec tests réels."
+          icon={<FaCode className="h-4 w-4 text-foreground" />}
+          title="3. Développement & Intégrations"
+          description="Code sur-mesure : agents IA, webhooks, scraping éthique, API REST/GraphQL. Intégrations CRM, outils marketing et systèmes de génération de leads avec tests A/B."
         />
 
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
           icon={
-            <FaUserTie className="h-4 w-4 text-black dark:text-neutral-400" />
+            <FaUserTie className="h-4 w-4 text-foreground" />
           }
-          title="4. Formation Équipes"
-          description="Formation pratique et documentation complète. Adoption en douceur."
+          title="4. Formation Technique Équipes"
+          description="Montée en compétences sur vos outils d&apos;automatisation, analyse de données marketing et workflows de prospection. Documentation technique et guides d&apos;utilisation."
         />
 
         <GridItem
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
           icon={
-            <FaChartLine className="h-4 w-4 text-black dark:text-neutral-400" />
+            <FaChartLine className="h-4 w-4 text-foreground" />
           }
-          title="5. Optimisation Continue"
-          description="Dashboard KPIs temps réel. Support illimité et évolutions gratuites 6 mois."
+          title="5. Analytics & Monitoring Tech"
+          description="Dashboard temps réel avec KPIs de prospection, taux de conversion et performance des campagnes. Data analysis continue, optimisation algorithmique et support technique illimité 6 mois."
         />
       </ul>
     </div>
@@ -89,16 +88,16 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
           proximity={64}
           inactiveZone={0.01}
         />
-        <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+        <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl bg-card p-6 md:p-6 shadow-sm">
           <div className="relative flex flex-1 flex-col justify-between gap-3">
-            <div className="w-fit rounded-lg border border-gray-600 p-2">
+            <div className="w-fit rounded-lg border border-border p-2">
               {icon}
             </div>
             <div className="space-y-3">
-              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-foreground md:text-2xl/[1.875rem]">
                 {title}
               </h3>
-              <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+              <h2 className="font-sans text-sm/[1.125rem] text-muted-foreground md:text-base/[1.375rem] [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                 {description}
               </h2>
             </div>

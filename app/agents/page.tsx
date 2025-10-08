@@ -10,6 +10,7 @@ import {
   MobileNavToggle,
   NavbarLogo,
   NavbarButton,
+  NavbarThemeToggle,
 } from "@/components/ui/resizable-navbar";
 import { navItemsAgents } from "@/data/navItemsAgents";
 import Tools from "@/components/Tools";
@@ -24,22 +25,28 @@ export default function AgentsPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <Navbar>
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItemsAgents} />
-          <NavbarButton href="#rendez-vous" variant="dark">
-            Rendez-vous
-          </NavbarButton>
+          <div className="flex items-center gap-2">
+            <NavbarThemeToggle />
+            <NavbarButton href="#rendez-vous" variant="dark">
+              Rendez-vous
+            </NavbarButton>
+          </div>
         </NavBody>
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isOpen}
-              onClick={() => setIsOpen(!isOpen)}
-            />
+            <div className="flex items-center gap-3">
+              <NavbarThemeToggle />
+              <MobileNavToggle
+                isOpen={isOpen}
+                onClick={() => setIsOpen(!isOpen)}
+              />
+            </div>
           </MobileNavHeader>
           <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
             {navItemsAgents.map((item, idx) => (
