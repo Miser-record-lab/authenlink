@@ -17,11 +17,12 @@ const Experience = () => {
       id="Collaboration"
     >
       <h2 className="text-center text-4xl font-bold text-foreground mb-8">
-        Notre <span className="text-primary">stack technologique</span> en 5
-        étapes
+        Notre <span className="text-primary">stack technique</span> en 5 étapes
       </h2>
       <p className="text-center text-lg text-muted-foreground mb-12 max-w-3xl">
-        Du code personnalisé à l&apos;analyse de données : une infrastructure technique complète pour automatiser votre prospection et générer des leads qualifiés.
+        Du code personnalisé à l&apos;analyse de données : une infrastructure
+        technique complète pour automatiser votre prospection et générer des
+        leads qualifiés.
       </p>
 
       <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 w-full">
@@ -34,11 +35,9 @@ const Experience = () => {
 
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-          icon={
-            <FaDatabase className="h-4 w-4 text-foreground" />
-          }
+          icon={<FaDatabase className="h-4 w-4 text-foreground" />}
           title="2. Architecture Data & Marketing"
-          description="Conception de pipelines d&apos;automatisation pour la prospection. Stratégie de data enrichment et scoring de leads avec ROI chiffré."
+          description="Conception de pipelines d'automatisation pour la prospection. Stratégie de data enrichment et scoring de leads avec ROI chiffré."
         />
 
         <GridItem
@@ -50,20 +49,16 @@ const Experience = () => {
 
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-          icon={
-            <FaUserTie className="h-4 w-4 text-foreground" />
-          }
+          icon={<FaUserTie className="h-4 w-4 text-foreground" />}
           title="4. Formation Technique Équipes"
-          description="Montée en compétences sur vos outils d&apos;automatisation, analyse de données marketing et workflows de prospection. Documentation technique et guides d&apos;utilisation."
+          description="Montée en compétences sur vos outils d'automatisation, analyse de données marketing et workflows de prospection. Documentation technique et guides d'utilisation."
         />
 
         <GridItem
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
-          icon={
-            <FaChartLine className="h-4 w-4 text-foreground" />
-          }
+          icon={<FaChartLine className="h-4 w-4 text-foreground" />}
           title="5. Analytics & Monitoring Tech"
-          description="Dashboard temps réel avec KPIs de prospection, taux de conversion et performance des campagnes. Data analysis continue, optimisation algorithmique et support technique illimité 6 mois."
+          description="Dashboard temps réel avec KPIs de prospection, taux de conversion et performance des campagnes. Data analysis continue, optimisation algorithmique et support technique illimité."
         />
       </ul>
     </div>
