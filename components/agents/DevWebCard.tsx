@@ -70,7 +70,7 @@ const DevWebCards = () => {
         <WobbleCard>
           <div className="flex flex-col items-start gap-6">
             <div className="flex items-center gap-3">
-              <FaPenFancy className="text-primary text-2xl" />
+              <FaPenFancy className="text-white text-2xl" />
               <h3 className="text-white text-2xl font-semibold">
                 Landing Pages optimisées
               </h3>
@@ -90,7 +90,7 @@ const DevWebCards = () => {
         <WobbleCard>
           <div className="flex flex-col items-start gap-6">
             <div className="flex items-center gap-3">
-              <FaBolt className="text-primary text-2xl" />
+              <FaBolt className="text-white text-2xl" />
               <h3 className="text-white text-2xl font-semibold">
                 Apps internes & outils métiers
               </h3>
