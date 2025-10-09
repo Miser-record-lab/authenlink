@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useMemo } from "react";
 
 export function BentoGridThirdDemo() {
   return (
@@ -109,7 +110,11 @@ const SkeletonTwo = () => {
       },
     },
   };
-  const arr = new Array(6).fill(0);
+
+  const widths = useMemo(() => {
+    return new Array(6).fill(0).map(() => Math.random() * (100 - 40) + 40);
+  }, []);
+
   return (
     <motion.div
       initial="initial"
@@ -117,12 +122,12 @@ const SkeletonTwo = () => {
       whileHover="hover"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
-      {arr.map((_, i) => (
+      {widths.map((width, i) => (
         <motion.div
           key={"skelenton-two" + i}
           variants={variants}
           style={{
-            maxWidth: Math.random() * (100 - 40) + 40 + "%",
+            maxWidth: width + "%",
           }}
           className="flex flex-row rounded-full border border-border p-2 items-center space-x-2 bg-muted w-full h-4"
         ></motion.div>
@@ -286,8 +291,8 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-muted-foreground">
-          Quel outil utiliser pour créer un agent IA qui s&apos;occupera de ma
-          boite mail ?
+          Pouvez-vous nous aider à mettre en place un agent supplémentaire
+          spécialisé dans l&apos;analyse des comptes clients ?
         </p>
       </motion.div>
       <motion.div
@@ -295,7 +300,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-full border border-border p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-card"
       >
         <p className="text-xs text-muted-foreground">
-          Utilisez n8n et un provider mail.{" "}
+          Oui bien sûr, nous pouvons prévoir cela pour jeudi ?{" "}
         </p>
         <div className="h-6 w-6 rounded-full bg-primary shrink-0" />
       </motion.div>

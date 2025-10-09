@@ -47,6 +47,7 @@ const ServiceCTA = () => {
             borderRadius="1.75rem"
             duration={Math.floor(Math.random() * 10000) + 10000}
             className="flex-1 flex flex-col text-foreground border-border bg-card hover:bg-accent/50 transition-colors p-4 min-h-[250px] max-w-[500px]"
+            as="div"
           >
             <div className="flex flex-col items-center text-center gap-4 flex-1">
               <div className="text-foreground">{offer.iconBig}</div>

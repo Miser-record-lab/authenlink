@@ -32,7 +32,7 @@ const Hero = () => {
             Marketing & data automation
           </p>
 
-          <p className="text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-normal font-bold md:font-normal text-foreground">
+          <div className="text-3xl md:text-5xl lg:text-7xl leading-tight md:leading-normal font-bold md:font-normal text-foreground">
             Création de solution d&apos;IA personnalisées{" "}
             <br className="hidden sm:block" /> pour vos services{" "}
             <br className="hidden sm:block" />
@@ -47,41 +47,16 @@ const Hero = () => {
               ]}
               duration={3000}
             />
-          </p>
-
-          {/* Deux boutons côte à côte
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
-            <a href="/multicanal" className="min-w-[230px]">
-              <MagicButton
-                title="Prospection multicanal"
-                icon={<TbMessageShare />}
-                position="left"
-              />
-            </a>
-
-            <a href="/agents" className="min-w-[230px]">
-              <MagicButton
-                title="Agents IA & Dev Web"
-                icon={<TbRobot />}
-                position="left"
-              />
-            </a>
-          </div> */}
+          </div>
 
           {/* Bouton Prendre rendez-vous */}
           <div className="lg:mt-0 mt-4 min-w-[230px]">
-            <a
-              href="https://calendly.com/authenlink/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full"
-            >
-              <MagicButton
-                title="Prendre rendez-vous"
-                icon={<FaCalendarAlt />}
-                position="right"
-              />
-            </a>
+            <MagicButton
+              title="Prendre rendez-vous"
+              icon={<FaCalendarAlt />}
+              position="right"
+              handleClick={() => window.open('https://calendly.com/authenlink/30min', '_blank')}
+            />
           </div>
         </div>
       </div>
