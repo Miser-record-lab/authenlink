@@ -5,8 +5,8 @@ import {
   IconBoxAlignRightFilled,
   IconClipboardCopy,
   IconFileBroken,
-  IconSignature,
   IconTableColumn,
+  IconTrendingUp,
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import Image from "next/image";
@@ -291,8 +291,8 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-muted-foreground">
-          Pouvez-vous nous aider à mettre en place un agent supplémentaire
-          spécialisé dans l&apos;analyse des comptes clients ?
+          Pouvez-vous nous aider à créer un agent supplémentaire dédié à
+          l’analyse des comptes clients ?
         </p>
       </motion.div>
       <motion.div
@@ -300,8 +300,9 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-full border border-border p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-card"
       >
         <p className="text-xs text-muted-foreground">
-          Oui bien sûr, nous pouvons prévoir cela pour jeudi ?{" "}
+          Bien sûr, nous pouvons planifier cela pour jeudi.
         </p>
+
         <div className="h-6 w-6 rounded-full bg-primary shrink-0" />
       </motion.div>
     </motion.div>
@@ -309,50 +310,61 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "Agents IA Conversationnels",
+    title: "Agents Autonomes",
     description: (
       <span className="text-sm">
-        Réduisez de <strong>70% le temps de réponse</strong> client et gérez
-        jusqu&apos;à <strong>500 conversations simultanées</strong> avec des
-        agents IA disponibles 24/7.
+        Réduisez la charge opérationnelle et{" "}
+        <strong>accélérez les temps de réponse de 80%</strong> grâce à des
+        workflows intelligents capables de
+        <strong>gérer les tâches répétitives</strong> et d’assurer une
+        <strong>disponibilité continue</strong>.
       </span>
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
     icon: <IconClipboardCopy className="h-4 w-4 text-muted-foreground" />,
   },
+
   {
-    title: "Génération de Leads Qualifiés",
+    title: "Agents Data",
     description: (
       <span className="text-sm">
-        Générez entre <strong>100 et 1000+ nouveaux leads par mois</strong>{" "}
-        grâce à nos campagnes multicanales automatisées et ciblées.
+        Centralisez vos données dispersées et{" "}
+        <strong>automatisez jusqu’à 70%</strong>
+        du travail d’analyse pour <strong>obtenir une vision claire</strong> et
+        <strong>prendre des décisions plus rapides et précises</strong>.
       </span>
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-muted-foreground" />,
   },
+
   {
-    title: "Sites Web Haute Performance",
+    title: "Agents Marketing & Stratégie",
     description: (
       <span className="text-sm">
-        Augmentez votre trafic organique de <strong>200%</strong> et améliorez
-        votre taux de conversion de <strong>35%</strong> avec un site optimisé
-        SEO.
+        Automatisez la création de contenu, la diffusion multicanale et
+        l’analyse des performances pour <strong>améliorer la visibilité</strong>{" "}
+        et
+        <strong>optimiser vos stratégies d’acquisitions</strong> en continu.
       </span>
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-muted-foreground" />,
+    icon: <IconTrendingUp className="h-4 w-4 text-muted-foreground" />,
   },
+
   {
     title: "Extraction & Enrichissement Données",
     description: (
       <span className="text-sm">
-        Économisez <strong>50h/mois</strong> de recherche manuelle en extrayant
-        et enrichissant automatiquement{" "}
-        <strong>10 000+ prospects qualifiés</strong>.
+        Automatisez la prospection et{" "}
+        <strong>identifiez les bons contacts</strong>
+        en quelques minutes. Accédez à{" "}
+        <strong>des milliers de leads qualifiés</strong>
+        enrichis en temps réel pour{" "}
+        <strong>accélérer la croissance commerciale</strong>.
       </span>
     ),
     header: <SkeletonFour />,
