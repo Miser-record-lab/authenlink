@@ -4,8 +4,15 @@ import { FlipWords } from "../ui/flip-words";
 import MagicButton from "../ui/MagicButton";
 import { Spotlight } from "../ui/Spotlight";
 import { FaCalendarAlt } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const HeroAgents = () => {
+  const router = useRouter();
+
+  const handleNavigateToCollaboration = () => {
+    router.push("/#contact");
+  };
+
   return (
     <div className="pb-10 pt-20 mb-4 md:mb-16" id="agents">
       {/* Background Spotlights */}
@@ -53,17 +60,12 @@ const HeroAgents = () => {
           </p>
 
           <div className="flex gap-10 mt-6">
-            <a
-              href="https://calendly.com/authenlink/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MagicButton
-                title="Prendre rendez-vous"
-                icon={<FaCalendarAlt />}
-                position="right"
-              />
-            </a>
+            <MagicButton
+              title="Prendre rendez-vous"
+              icon={<FaCalendarAlt />}
+              position="right"
+              handleClick={handleNavigateToCollaboration}
+            />
           </div>
         </div>
       </div>

@@ -1,7 +1,5 @@
 import { FlipWords } from "../ui/flip-words";
-import MagicButton from "../ui/MagicButton";
 import { Spotlight } from "../ui/Spotlight";
-import { FaCalendarAlt } from "react-icons/fa";
 
 const HeroMulticanal = () => {
   return (
@@ -44,20 +42,6 @@ const HeroMulticanal = () => {
               duration={2500}
             />
           </p>
-
-          <div className="flex gap-10 mt-6">
-            <a
-              href="https://calendly.com/authenlink/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MagicButton
-                title="Prendre rendez-vous"
-                icon={<FaCalendarAlt />}
-                position="right"
-              />
-            </a>
-          </div>
         </div>
       </div>
     </div>

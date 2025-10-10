@@ -11,6 +11,7 @@ import {
   FaChartBar,
   FaPuzzlePiece,
 } from "react-icons/fa";
+import { AnimatedSpan, TypingAnimation, Terminal } from "../ui/terminal";
 
 const agentServices = [
   {
@@ -80,7 +81,7 @@ const agentServices = [
 
 const AgentServices = () => {
   return (
-    <section className="pb-20 px-4 md:px-10 max-w-7xl mx-auto" id="features">
+    <section className="pb-10 px-4 md:px-10 max-w-7xl mx-auto" id="features">
       <h2 className="text-4xl font-bold text-foreground text-center mb-6">
         Nos solutions d&apos;<span className="text-primary">Agents IA</span>
       </h2>
@@ -90,6 +91,61 @@ const AgentServices = () => {
         exemples concrets.
       </p>
       <HoverEffect items={agentServices} />
+      <div className="mx-auto flex flex-col items-center px-5">
+        <Terminal>
+          <TypingAnimation>
+            &gt; npm create-ai-agent --mode=intelligent
+          </TypingAnimation>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Agents conversationnels activés.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Vos chatbots qualifient les leads 24/7.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Workflows IA personnalisés en cours de configuration.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Connexion avec vos outils internes établie.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Agents d&apos;extraction & traitement de données initialisés.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Scraping intelligent et enrichissement automatique actifs.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Automatisation CRM & Emailing synchronisée.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Vos campaigns s&apos;envoient automatiquement.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Dashboards intelligents générant des insights.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Recommandations en temps réel disponibles.
+          </AnimatedSpan>
+
+          <TypingAnimation className="text-muted-foreground">
+            Success! Vos agents IA travaillent pour vous.
+          </TypingAnimation>
+
+          <TypingAnimation className="text-muted-foreground">
+            Vos processus sont maintenant intelligents et autonomes.
+          </TypingAnimation>
+        </Terminal>
+      </div>
     </section>
   );
 };

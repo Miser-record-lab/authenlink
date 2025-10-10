@@ -9,11 +9,12 @@ import {
   FaUserTie,
   FaChartLine,
 } from "react-icons/fa";
+import { AnimatedSpan, TypingAnimation, Terminal } from "./ui/terminal";
 
 const Experience = () => {
   return (
     <div
-      className="py-20 max-w-7xl mx-auto flex flex-col items-center px-5"
+      className=" max-w-7xl mx-auto flex flex-col items-center px-5"
       id="Collaboration"
     >
       <h2 className="text-center text-4xl font-bold text-foreground mb-8">
@@ -62,6 +63,58 @@ const Experience = () => {
           description="Formation technique pour vos équipes. Documentation et support pour faire évoluer vos workflows et infrastructures."
         />
       </ul>
+
+      <div className="mt-10">
+        <Terminal>
+          <TypingAnimation>&gt; npm authenlink --init</TypingAnimation>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Audit de votre stack et workflows en cours...
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Analyse des systèmes existants complétée.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Identification des points d&apos;optimisation.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Conception de l&pos;architecture technique.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Design des workflows automatisés.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Développement des solutions sur mesure.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Tests et validation en cours.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Déploiement en production.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-green-500">
+            ✔ Intégration avec vos systèmes complétée.
+          </AnimatedSpan>
+
+          <AnimatedSpan className="text-blue-500">
+            <span>ℹ Formation équipes:</span>
+            <span className="pl-2">- Documentation complète</span>
+            <span className="pl-2">- Support technique</span>
+          </AnimatedSpan>
+
+          <TypingAnimation className="text-muted-foreground">
+            Success! Votre infrastructure est prête.
+          </TypingAnimation>
+        </Terminal>
+      </div>
     </div>
   );
 };

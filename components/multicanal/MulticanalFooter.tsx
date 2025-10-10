@@ -1,30 +1,37 @@
-"use client"
+"use client";
 
-import { FaCalendar } from "react-icons/fa"
-import MagicButton from "@/components/ui/MagicButton"
+import MagicButton from "@/components/ui/MagicButton";
+import { useRouter } from "next/navigation";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const MulticanalFooter = () => {
+  const router = useRouter();
+
+  const handleNavigateToCollaboration = () => {
+    router.push("/#contact");
+  };
+
   return (
     <footer className="w-full pt-20 pb-1" id="rendez-vous">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw] text-center">
-          Prêt à <span className="text-primary">lancer</span> une campagne de prospection multicanale ?
+          Prêt à <span className="text-primary">lancer</span> une campagne de
+          prospection multicanale ?
         </h1>
         <p className="text-muted-foreground md:mt-10 my-5 text-center max-w-2xl">
-          Réservez un créneau de 30 minutes pour échanger sur vos objectifs, vos cibles, et comment on peut automatiser votre acquisition avec efficacité.
+          Réservez un créneau de 30 minutes pour échanger sur vos objectifs, vos
+          cibles, et comment on peut automatiser votre acquisition avec
+          efficacité.
         </p>
 
-        <a
-          href="https://calendly.com/authenlink/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="flex gap-10 mt-6">
           <MagicButton
             title="Prendre rendez-vous"
-            icon={<FaCalendar />}
+            icon={<FaCalendarAlt />}
             position="right"
+            handleClick={handleNavigateToCollaboration}
           />
-        </a>
+        </div>
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
@@ -33,7 +40,7 @@ const MulticanalFooter = () => {
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default MulticanalFooter
+export default MulticanalFooter;

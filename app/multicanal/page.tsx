@@ -33,7 +33,7 @@ export default function MulticanalPage() {
           <NavItems items={navItemsMulticanal} />
           <div className="flex items-center gap-2">
             <NavbarThemeToggle />
-            <NavbarButton href="#rendez-vous" variant="dark">
+            <NavbarButton href="/#contact" variant="dark">
               Rendez-vous
             </NavbarButton>
           </div>

@@ -1,30 +1,77 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/MovingBorders";
 import { FaRobot, FaEnvelopeOpenText } from "react-icons/fa";
-import MagicButton from "@/components/ui/MagicButton";
+import React, { forwardRef, useRef } from "react";
+import { cn } from "@/lib/utils";
+import { AnimatedBeam } from "@/components/ui/animated-beam";
+import { FaPython, FaJsSquare, FaPhone, FaEnvelope } from "react-icons/fa";
+import { SiN8N, SiMetabase, SiOpenai } from "react-icons/si";
+import { HoverEffect } from "./ui/card-hover-effect-hero";
 
-const offers = [
+const OffersServices = [
   {
-    id: 1,
-    iconBig: <FaEnvelopeOpenText className="text-5xl text-foreground" />,
-    icon: <FaEnvelopeOpenText className="text-2xl" />,
-    title: "Infrastructure Marketing",
-    desc: "Solutions clés en main pour votre acquisition : campagnes multicanales, génération de leads qualifiés et automatisation de votre prospection.",
-    href: "/multicanal",
+    icon: <FaEnvelopeOpenText className="text-primary text-4xl" />,
+    title: "Infrastructure Marketing & Growth",
+    description:
+      "Solutions clés en main pour votre acquisition : campagnes multicanales, génération de leads qualifiés et automatisation de votre prospection.",
+    link: "/multicanal",
+    buttonText: "En savoir plus",
   },
   {
-    id: 2,
-    iconBig: <FaRobot className="text-5xl text-foreground" />,
-    icon: <FaRobot className="text-2xl" />,
+    icon: <FaRobot className="text-primary text-4xl" />,
     title: "Agents IA & Automatisation",
-    desc: "Optimisation de vos processus métiers grâce à l'intelligence artificielle : agents conversationnels, automatisation des tâches et développement d'outils sur mesure.",
-    href: "/agents",
+    description:
+      "Optimisation de vos processus métiers grâce à l'intelligence artificielle : agents conversationnels, automatisation des tâches et analyse en continue.",
+    link: "/agents",
+    buttonText: "En savoir plus",
   },
 ];
 
+const Circle = forwardRef<
+  HTMLDivElement,
+  { className?: string; children?: React.ReactNode }
+>(({ className, children }, ref) => {
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "z-10 flex size-16 items-center justify-center rounded-full border-2 border-border bg-card p-4 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+});
+
+Circle.displayName = "Circle";
+
+const Icons = {
+  python: () => <FaPython className="w-6 h-6 text-foreground" />,
+
+  javascript: () => <FaJsSquare className="w-6 h-6 text-foreground" />,
+
+  n8n: () => <SiN8N className="w-6 h-6 text-foreground" />,
+
+  metabase: () => <SiMetabase className="w-6 h-6 text-foreground" />,
+
+  mail: () => <FaEnvelope className="w-6 h-6 text-foreground" />,
+
+  openai: () => <SiOpenai className="w-6 h-6 text-primary" />,
+
+  phone: () => <FaPhone className="w-6 h-6 text-foreground" />,
+};
+
 const ServiceCTA = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const div1Ref = useRef<HTMLDivElement>(null);
+  const div2Ref = useRef<HTMLDivElement>(null);
+  const div3Ref = useRef<HTMLDivElement>(null);
+  const div4Ref = useRef<HTMLDivElement>(null);
+  const div5Ref = useRef<HTMLDivElement>(null);
+  const div6Ref = useRef<HTMLDivElement>(null);
+  const div7Ref = useRef<HTMLDivElement>(null);
+
   return (
     <section
       className="py-20 max-w-7xl mx-auto flex flex-col items-center"
@@ -34,38 +81,101 @@ const ServiceCTA = () => {
         <span className="text-primary">Deux expertises</span> au service de
         votre croissance
       </h2>
-      <p className="text-center text-lg text-muted-foreground mb-12">
+      <p className="text-center text-lg text-muted-foreground mb-6">
         Intelligence artificielle et marketing digital : des solutions
         innovantes pour transformer vos opérations et accélérer votre
         développement.
       </p>
+      <div className="w-full flex flex-col lg:flex-row gap-10 justify-center items-center">
+        <HoverEffect items={OffersServices} />
+      </div>
 
-      <div className="w-full mt-12 flex flex-col lg:flex-row gap-10 justify-center items-stretch">
-        {offers.map((offer) => (
-          <Button
-            key={offer.id}
-            borderRadius="1.75rem"
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            className="flex-1 flex flex-col text-foreground border-border bg-card hover:bg-accent/50 transition-colors p-4 min-h-[250px] max-w-[500px]"
-            as="div"
-          >
-            <div className="flex flex-col items-center text-center gap-4 flex-1">
-              <div className="text-foreground">{offer.iconBig}</div>
-              <h3 className="text-2xl font-bold">{offer.title}</h3>
-              <p className="text-muted-foreground font-medium">{offer.desc}</p>
-            </div>
+      {/* Animated Beam Section */}
+      <div className="w-full mt-10">
+        <h3 className="text-center text-3xl font-bold text-foreground mb-4">
+          Une <span className="text-primary">infrastructure</span> connectée
+        </h3>
+        <p className="text-center text-lg text-muted-foreground">
+          Nous connectons vos outils existants pour créer un écosystème fluide
+          et automatisé
+        </p>
 
-            <div className="flex justify-center mt-4">
-              <Link href={offer.href}>
-                <MagicButton
-                  title="Découvrir"
-                  icon={offer.icon}
-                  position="right"
-                />
-              </Link>
+        <div
+          className="relative flex h-[400px] w-full items-center justify-center overflow-hidden rounded-lg bg-background pb-10"
+          ref={containerRef}
+        >
+          <div className="flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10">
+            <div className="flex flex-row items-center justify-between">
+              <Circle ref={div1Ref}>
+                <Icons.python />
+              </Circle>
+              <Circle ref={div5Ref}>
+                <Icons.phone />
+              </Circle>
             </div>
-          </Button>
-        ))}
+            <div className="flex flex-row items-center justify-between">
+              <Circle ref={div2Ref}>
+                <Icons.javascript />
+              </Circle>
+              <Circle ref={div4Ref} className="size-16">
+                <Icons.openai />
+              </Circle>
+              <Circle ref={div6Ref}>
+                <Icons.mail />
+              </Circle>
+            </div>
+            <div className="flex flex-row items-center justify-between">
+              <Circle ref={div3Ref}>
+                <Icons.n8n />
+              </Circle>
+              <Circle ref={div7Ref}>
+                <Icons.metabase />
+              </Circle>
+            </div>
+          </div>
+
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div1Ref}
+            toRef={div4Ref}
+            curvature={-75}
+            endYOffset={-10}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div2Ref}
+            toRef={div4Ref}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div3Ref}
+            toRef={div4Ref}
+            curvature={75}
+            endYOffset={10}
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div5Ref}
+            toRef={div4Ref}
+            curvature={-75}
+            endYOffset={-10}
+            reverse
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div6Ref}
+            toRef={div4Ref}
+            reverse
+          />
+          <AnimatedBeam
+            containerRef={containerRef}
+            fromRef={div7Ref}
+            toRef={div4Ref}
+            curvature={75}
+            endYOffset={10}
+            reverse
+          />
+        </div>
       </div>
     </section>
   );

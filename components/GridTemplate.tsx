@@ -11,6 +11,7 @@ import {
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useMemo } from "react";
+import { NumberTicker } from "./ui/number-ticker";
 
 export function BentoGridThirdDemo() {
   return (
@@ -314,8 +315,16 @@ const items = [
     description: (
       <span className="text-sm">
         Réduisez la charge opérationnelle et{" "}
-        <strong>accélérez les temps de réponse de 80%</strong> grâce à des
-        workflows intelligents capables de
+        <strong>
+          accélérez les temps de réponse de{" "}
+          <NumberTicker
+            value={80}
+            decimalPlaces={0}
+            className="text-sm font-bold tracking-tighter whitespace-pre-wrap text-primary"
+          />
+          %
+        </strong>{" "}
+        grâce à des workflows intelligents capables de
         <strong>gérer les tâches répétitives</strong> et d’assurer une
         <strong>disponibilité continue</strong>.
       </span>
@@ -330,7 +339,15 @@ const items = [
     description: (
       <span className="text-sm">
         Centralisez vos données dispersées et{" "}
-        <strong>automatisez jusqu’à 70%</strong>
+        <strong>
+          automatisez jusqu’à{" "}
+          <NumberTicker
+            value={70}
+            decimalPlaces={0}
+            className="text-sm font-bold tracking-tighter whitespace-pre-wrap text-primary"
+          />
+          %
+        </strong>
         du travail d’analyse pour <strong>obtenir une vision claire</strong> et
         <strong>prendre des décisions plus rapides et précises</strong>.
       </span>

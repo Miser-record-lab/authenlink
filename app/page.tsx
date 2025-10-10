@@ -27,7 +27,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-4 px-4">
+    <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto px-2">
       <div className="w-full">
         <Navbar>
           <NavBody>
@@ -35,7 +35,7 @@ export default function Home() {
             <NavItems items={navItems} />
             <div className="flex items-center gap-2">
               <NavbarThemeToggle />
-              <NavbarButton href="#contact" variant="dark">
+              <NavbarButton href="/#contact" variant="dark">
                 Rendez-vous
               </NavbarButton>
             </div>
