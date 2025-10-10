@@ -50,7 +50,6 @@ const MarketingAutomation = () => {
       {/* En-tête avec présentation */}
       <div className="text-center mb-16 max-w-4xl mx-auto">
         <div className="flex items-center justify-center gap-2 mb-6">
-          <FaRobot className="text-primary text-3xl" />
           <h2 className="text-4xl font-bold text-foreground">
             Marketing{" "}
             <span className="text-primary">
