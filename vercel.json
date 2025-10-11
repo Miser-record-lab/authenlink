@@ -27,9 +27,5 @@
         }
       ]
     }
-  ],
-  "images": {
-    "domains": ["assets.aceternity.com", "pbs.twimg.com", "images.unsplash.com"],
-    "formats": ["image/avif", "image/webp"]
-  }
+  ]
 }
