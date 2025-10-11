@@ -29,7 +29,7 @@ const workflowFeatures = [
     ),
     description:
       "Workflow automatisé pour gagner du temps et réduire les erreurs manuelles.",
-    link: "",
+    link: "/multicanal",
   },
   {
     title: (
@@ -40,7 +40,7 @@ const workflowFeatures = [
     ),
     description:
       "Intégration d'agents AI pour des réponses intelligentes et contextuelles.",
-    link: "",
+    link: "/agent",
   },
   {
     title: (

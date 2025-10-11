@@ -1129,15 +1129,7 @@
       ]
     },
     "Insert into Supabase Vectorstore": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Items",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
+      "main": [[]]
     },
     "Extract from Excel": {
       "main": [
@@ -1308,7 +1300,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "068c4971-36c2-467f-9269-8188096c0aa9",
+  "versionId": "f1326327-8870-4d44-a2da-27f601da1cff",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "b35269c8495db354f1459fb10ec8f343e34cd6c71fb24a004bb668ccda72b4e6"

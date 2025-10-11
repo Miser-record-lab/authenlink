@@ -16,7 +16,7 @@ import { CustomNode } from "./CustomNode";
 import { StickyNote } from "./StickyNote";
 
 // Import du workflow JSON
-import workflowData from "@/workflows/rag.json";
+import workflowData from "@/data/workflows/rag.json";
 
 const nodeTypes = {
   custom: CustomNode,
