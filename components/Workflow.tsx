@@ -68,10 +68,10 @@ export default function Workflow() {
           fitViewOptions={{
             padding: 0.2,
             includeHiddenNodes: false,
-            minZoom: 0.2,
+            minZoom: 0.3,
             maxZoom: 1.5,
           }}
-          defaultViewport={{ x: 0, y: 0, zoom: 0.3 }}
+          defaultViewport={{ x: 0, y: 0, zoom: 0.6 }}
           attributionPosition="bottom-left"
           className="bg-gray-400 dark:bg-gray-900"
           nodesDraggable={false}

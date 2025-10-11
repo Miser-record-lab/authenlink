@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { CardStack } from "./ui/card-stack";
 
 // Import dynamique pour éviter les problèmes SSR avec ReactFlow
 const Workflow = dynamic(() => import("./Workflow"), {
@@ -16,6 +17,48 @@ const Workflow = dynamic(() => import("./Workflow"), {
     </div>
   ),
 });
+
+const CARDS = [
+  {
+    id: 0,
+    name: "Automatisation",
+    designation: "Gain de temps et précision",
+    content: (
+      <div className="flex flex-col gap-3">
+        <span className="text-4xl">⚡</span>
+        <p className="text-base">
+          Workflow automatisé pour gagner du temps et réduire les erreurs manuelles. Optimisez vos processus métiers.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 1,
+    name: "Intelligence AI",
+    designation: "Réponses contextuelles",
+    content: (
+      <div className="flex flex-col gap-3">
+        <span className="text-4xl">🤖</span>
+        <p className="text-base">
+          Intégration d&apos;agents AI pour des réponses intelligentes et contextuelles adaptées à vos besoins.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    name: "Analyse de données",
+    designation: "Performance optimisée",
+    content: (
+      <div className="flex flex-col gap-3">
+        <span className="text-4xl">📊</span>
+        <p className="text-base">
+          Collecte et analyse des métriques pour optimiser les performances et prendre de meilleures décisions.
+        </p>
+      </div>
+    ),
+  },
+];
 
 export default function WorkflowSection() {
   return (
@@ -41,44 +84,8 @@ export default function WorkflowSection() {
         </div>
 
         {/* Informations supplémentaires */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl">⚡</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Automatisation
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Workflow automatisé pour gagner du temps et réduire les erreurs
-              manuelles.
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl">🤖</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Intelligence AI
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Intégration d'agents AI pour des réponses intelligentes et
-              contextuelles.
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl">📊</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Analyse de données
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Collecte et analyse des métriques pour optimiser les performances.
-            </p>
-          </div>
+        <div className="mt-16 flex justify-center">
+          <CardStack items={CARDS} />
         </div>
       </div>
     </section>
