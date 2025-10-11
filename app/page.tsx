@@ -6,6 +6,7 @@ import { BentoGridThirdDemo } from "@/components/GridTemplate";
 import Hero from "@/components/Hero";
 import ServicesCTA from "@/components/ServicesCTA";
 import Tools from "@/components/Tools";
+import WorkflowSection from "@/components/WorkflowSection";
 import {
   Navbar,
   NavBody,
@@ -71,6 +72,9 @@ export default function Home() {
           <ServicesCTA />
           <Experience />
           <ContactAndAppointment />
+          <div className="hidden md:block">
+            <WorkflowSection />
+          </div>
           <Footer />
           <Tools />
         </TracingBeam>
