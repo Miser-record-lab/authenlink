@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import ReactFlow, {
   Background,
   Controls,
@@ -24,11 +24,30 @@ const nodeTypes = {
 };
 
 export default function Workflow() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // Transformer les données du workflow
   const { nodes, edges } = useMemo(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return transformWorkflow(workflowData as any);
   }, []);
+
+  if (!isClient) {
+    return (
+      <div className="w-full h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Chargement du workflow...
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full h-screen bg-gray-50 dark:bg-gray-900">
@@ -68,10 +87,10 @@ export default function Workflow() {
           fitViewOptions={{
             padding: 0.2,
             includeHiddenNodes: false,
-            minZoom: 0.2,
+            minZoom: 0.3,
             maxZoom: 1.5,
           }}
-          defaultViewport={{ x: 0, y: 0, zoom: 0.3 }}
+          defaultViewport={{ x: 0, y: 0, zoom: 0.6 }}
           attributionPosition="bottom-left"
           className="bg-gray-400 dark:bg-gray-900"
           nodesDraggable={false}

@@ -1,6 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { HoverEffect } from "./ui/card-hover-effect";
+import { FaCog, FaRobot, FaChartLine } from "react-icons/fa";
 
 // Import dynamique pour éviter les problèmes SSR avec ReactFlow
 const Workflow = dynamic(() => import("./Workflow"), {
@@ -16,6 +18,42 @@ const Workflow = dynamic(() => import("./Workflow"), {
     </div>
   ),
 });
+
+const workflowFeatures = [
+  {
+    title: (
+      <div className="flex items-center gap-3">
+        <FaCog className="text-3xl text-primary" />
+        <span>Automatisation</span>
+      </div>
+    ),
+    description:
+      "Workflow automatisé pour gagner du temps et réduire les erreurs manuelles.",
+    link: "#",
+  },
+  {
+    title: (
+      <div className="flex items-center gap-3">
+        <FaRobot className="text-3xl text-primary" />
+        <span>AI Agents</span>
+      </div>
+    ),
+    description:
+      "Intégration d'agents AI pour des réponses intelligentes et contextuelles.",
+    link: "#",
+  },
+  {
+    title: (
+      <div className="flex items-center gap-3">
+        <FaChartLine className="text-3xl text-primary" />
+        <span>Analyse de données</span>
+      </div>
+    ),
+    description:
+      "Collecte et analyse des métriques pour optimiser les performances.",
+    link: "#",
+  },
+];
 
 export default function WorkflowSection() {
   return (
@@ -40,46 +78,8 @@ export default function WorkflowSection() {
           </div>
         </div>
 
-        {/* Informations supplémentaires */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl">⚡</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Automatisation
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Workflow automatisé pour gagner du temps et réduire les erreurs
-              manuelles.
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl">🤖</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Intelligence AI
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Intégration d'agents AI pour des réponses intelligentes et
-              contextuelles.
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-3xl">📊</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Analyse de données
-              </h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Collecte et analyse des métriques pour optimiser les performances.
-            </p>
-          </div>
-        </div>
+        {/* Informations supplémentaires avec HoverEffect */}
+        <HoverEffect items={workflowFeatures} className="mt-8" />
       </div>
     </section>
   );
