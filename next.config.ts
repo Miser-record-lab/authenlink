@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['@tabler/icons-react', 'lucide-react', 'react-icons'],
   },
+  // Optimisation moderne pour réduire les polyfills
+  swcMinify: true,
+  // Améliorer la compression
+  poweredByHeader: false,
+  // Optimiser les performances
+  reactStrictMode: true,
 };
 
 export default nextConfig;

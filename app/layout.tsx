@@ -22,7 +22,19 @@ export const metadata: Metadata = {
   description: "Agence d'automatisation digitale",
   icons: {
     icon: "/authenlink.png",
-  }
+  },
+  openGraph: {
+    title: "AuthenLink",
+    description: "Agence d'automatisation digitale",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

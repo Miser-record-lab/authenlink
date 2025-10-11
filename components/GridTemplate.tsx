@@ -112,8 +112,10 @@ const SkeletonTwo = () => {
     },
   };
 
+  // Utiliser des valeurs fixes pour éviter l'erreur d'hydratation
+  // Ces valeurs étaient auparavant générées avec Math.random()
   const widths = useMemo(() => {
-    return new Array(6).fill(0).map(() => Math.random() * (100 - 40) + 40);
+    return [62.83, 76.26, 64.19, 88.33, 50.15, 72.45];
   }, []);
 
   return (
@@ -208,7 +210,7 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-muted-foreground mt-4">
           Entreprise de services à la consommation
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-red-500 bg-red-100 dark:bg-background text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Ne pas contacter
         </p>
       </motion.div>
@@ -223,7 +225,7 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-muted-foreground mt-4">
           CTO Saas proptech
         </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-green-500 bg-green-100 dark:bg-background text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Lead
         </p>
       </motion.div>
@@ -241,7 +243,7 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-muted-foreground mt-4">
           Dirigeante agence Marketing
         </p>
-        <p className="border border-blue-500 bg-orange-100 dark:bg-orange-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-blue-500 bg-orange-100 dark:bg-background text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Potentiel Lead
         </p>
       </motion.div>

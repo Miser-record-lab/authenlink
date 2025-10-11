@@ -268,10 +268,14 @@
 /* Optimisations de performance */
 .react-flow__renderer {
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .react-flow__viewport {
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Désactiver les transitions pendant le déplacement */

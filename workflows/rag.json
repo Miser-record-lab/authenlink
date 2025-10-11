@@ -46,7 +46,7 @@
       "name": "Download File",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
-      "position": [1696, 1744],
+      "position": [1696, 1840],
       "executeOnce": true
     },
     {
@@ -73,7 +73,7 @@
       "name": "File Created",
       "type": "n8n-nodes-base.googleDriveTrigger",
       "typeVersion": 1,
-      "position": [-32, 1552]
+      "position": [-32, 1648]
     },
     {
       "parameters": {
@@ -99,7 +99,7 @@
       "name": "File Updated",
       "type": "n8n-nodes-base.googleDriveTrigger",
       "typeVersion": 1,
-      "position": [-32, 1744]
+      "position": [-32, 1840]
     },
     {
       "parameters": {
@@ -110,7 +110,7 @@
       "name": "Extract Document Text",
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1,
-      "position": [2608, 2176],
+      "position": [2640, 2176],
       "alwaysOutputData": true
     },
     {
@@ -124,7 +124,7 @@
       "name": "Delete Old Doc Rows",
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [848, 1552],
+      "position": [848, 1648],
       "alwaysOutputData": true
     },
     {
@@ -163,7 +163,7 @@
       "name": "Set File ID",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [592, 1744]
+      "position": [592, 1840]
     },
     {
       "parameters": {
@@ -256,7 +256,7 @@
       "name": "Extract PDF Text",
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1,
-      "position": [2592, 1408]
+      "position": [2640, 1472]
     },
     {
       "parameters": {
@@ -267,7 +267,7 @@
       "name": "Aggregate",
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [2800, 1632]
+      "position": [2832, 1680]
     },
     {
       "parameters": {
@@ -285,7 +285,7 @@
       "name": "Summarize",
       "type": "n8n-nodes-base.summarize",
       "typeVersion": 1,
-      "position": [3136, 1840]
+      "position": [3168, 1888]
     },
     {
       "parameters": {
@@ -405,7 +405,7 @@
       "name": "Switch",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3,
-      "position": [1984, 1696]
+      "position": [1984, 1792]
     },
     {
       "parameters": {
@@ -424,7 +424,7 @@
       "name": "Insert into Supabase Vectorstore",
       "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
       "typeVersion": 1,
-      "position": [3600, 1936]
+      "position": [3600, 1920]
     },
     {
       "parameters": {
@@ -435,7 +435,7 @@
       "name": "Extract from Excel",
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1,
-      "position": [2416, 1632]
+      "position": [2448, 1680]
     },
     {
       "parameters": {
@@ -469,7 +469,7 @@
       },
       "type": "n8n-nodes-base.extractFromFile",
       "typeVersion": 1,
-      "position": [2416, 1888],
+      "position": [2448, 1936],
       "id": "2930b126-7f54-42ac-a7a8-056890321c92",
       "name": "Extract from CSV"
     },
@@ -481,7 +481,7 @@
       },
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
-      "position": [368, 1552],
+      "position": [368, 1648],
       "id": "e56247e8-10a4-42ba-95de-d57bb96d494b",
       "name": "Loop Over Items"
     },
@@ -501,7 +501,7 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [1104, 1744],
+      "position": [1104, 1840],
       "id": "be8d7930-cb8f-48e3-9bb7-68ba79dd3570",
       "name": "Delete Old Data Rows",
       "alwaysOutputData": true,
@@ -586,7 +586,7 @@
       },
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.5,
-      "position": [1408, 1536],
+      "position": [1408, 1632],
       "id": "b7837d5f-429f-4cb5-b33a-242913f07dcb",
       "name": "Insert Document Metadata",
       "executeOnce": true
@@ -648,7 +648,7 @@
       },
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.5,
-      "position": [2816, 1888],
+      "position": [2848, 1936],
       "id": "480419e9-1288-42f6-b87e-3bc6f02e2a03",
       "name": "Insert Table Rows"
     },
@@ -1308,7 +1308,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "8e2c5539-5687-475d-b537-3bef2e4f04f6",
+  "versionId": "068c4971-36c2-467f-9269-8188096c0aa9",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "b35269c8495db354f1459fb10ec8f343e34cd6c71fb24a004bb668ccda72b4e6"

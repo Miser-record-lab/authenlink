@@ -29,7 +29,7 @@ const workflowFeatures = [
     ),
     description:
       "Workflow automatisé pour gagner du temps et réduire les erreurs manuelles.",
-    link: "#",
+    link: "",
   },
   {
     title: (
@@ -40,7 +40,7 @@ const workflowFeatures = [
     ),
     description:
       "Intégration d'agents AI pour des réponses intelligentes et contextuelles.",
-    link: "#",
+    link: "",
   },
   {
     title: (
@@ -51,7 +51,7 @@ const workflowFeatures = [
     ),
     description:
       "Collecte et analyse des métriques pour optimiser les performances.",
-    link: "#",
+    link: "",
   },
 ];
 

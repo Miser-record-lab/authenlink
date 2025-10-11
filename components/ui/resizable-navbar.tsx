@@ -11,6 +11,7 @@ import {
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
+import Link from "next/link";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -232,19 +233,13 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-foreground"
     >
-      <Image
-        src="/AuthenLink.png"
-        alt="logo"
-        width={30}
-        height={30}
-        priority
-      />
+      <Image src="/AuthenLink.png" alt="logo" width={30} height={30} priority />
       <span className="font-medium text-foreground">AuthenLink</span>
-    </a>
+    </Link>
   );
 };
 
@@ -269,8 +264,7 @@ export const NavbarButton = ({
     "px-4 py-2 rounded-md text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
-    primary:
-      "bg-card text-foreground shadow-lg border border-border",
+    primary: "bg-card text-foreground shadow-lg border border-border",
     secondary: "bg-transparent shadow-none text-foreground",
     dark: "bg-primary text-primary-foreground shadow-lg",
     gradient:
