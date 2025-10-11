@@ -6,9 +6,10 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
 
 interface NavbarProps {
@@ -235,11 +236,12 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-foreground"
     >
-      <img
+      <Image
         src="/AuthenLink.png"
         alt="logo"
         width={30}
         height={30}
+        priority
       />
       <span className="font-medium text-foreground">AuthenLink</span>
     </a>
