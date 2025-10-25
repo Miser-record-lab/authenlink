@@ -66,18 +66,27 @@ export default function Home() {
             </MobileNavMenu>
           </MobileNav>
         </Navbar>
-        <TracingBeam>
+        <div className="hidden md:block">
+          <TracingBeam>
+            <Hero />
+            <BentoGridThirdDemo />
+            <ServicesCTA />
+            <Experience />
+            <ContactAndAppointment />
+            <WorkflowSection />
+            <Footer />
+            <Tools />
+          </TracingBeam>
+        </div>
+        <div className="md:hidden">
           <Hero />
           <BentoGridThirdDemo />
           <ServicesCTA />
           <Experience />
           <ContactAndAppointment />
-          <div className="hidden md:block">
-            <WorkflowSection />
-          </div>
           <Footer />
           <Tools />
-        </TracingBeam>
+        </div>
       </div>
     </main>
   );
