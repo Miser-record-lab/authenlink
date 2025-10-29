@@ -2,6 +2,6 @@ export const navItems = [
   { name: "Acceuil", link: "#acceuil" },
   { name: "Services", link: "#services" },
   { name: "Méthode", link: "#Collaboration" },
-  { name: "Docs", link: "https://www.docs.authenlink.com" },
-  { name: "Blog", link: "https://www.blog.authenlink.com" },
+  { name: "Docs", link: "https://docs.authenlink.com" },
+  { name: "Blog", link: "https://blog.authenlink.com" },
 ];
