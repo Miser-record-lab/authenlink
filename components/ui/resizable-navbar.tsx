@@ -70,7 +70,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      className={cn("fixed inset-x-0 top-0 z-40 w-full", className)}
+      className={cn("fixed inset-x-0 top-2 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -237,7 +237,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-foreground"
     >
-      <Image src="/AuthenLink.png" alt="logo" width={30} height={30} priority />
+      <Image src="/authenlink.png" alt="logo" width={30} height={30} priority />
       <span className="font-medium text-foreground">AuthenLink</span>
     </Link>
   );
