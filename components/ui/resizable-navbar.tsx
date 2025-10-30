@@ -237,7 +237,7 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-foreground"
     >
-      <Image src="/authenlink.png" alt="logo" width={30} height={30} priority />
+      <Image src="/authenlink.png" alt="logo" width={40} height={40} priority />
       <span className="font-medium text-foreground">AuthenLink</span>
     </Link>
   );
