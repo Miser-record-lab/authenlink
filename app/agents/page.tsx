@@ -17,7 +17,7 @@ import Tools from "@/components/Tools";
 import HeroAgents from "@/components/agents/HeroAgents";
 import AgentServices from "@/components/agents/AgentServices";
 import FooterAgents from "@/components/agents/FooterAgents";
-import DevWebCards from "@/components/agents/DevWebCard";
+import AIModelCards from "@/components/agents/AIModelCards";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { useState } from "react";
 
@@ -71,9 +71,9 @@ export default function AgentsPage() {
             <AgentServices />
           </section>
 
-          {/* Section Développement Web */}
-          <section id="developpement">
-            <DevWebCards />
+          {/* Section Fine-Tuning & RAG */}
+          <section id="fine-tuning-rag">
+            <AIModelCards />
           </section>
 
           {/* Section Prise de RDV */}

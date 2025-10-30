@@ -17,10 +17,10 @@ import HeroMulticanal from "@/components/multicanal/HeroMulticanal";
 import MarketingAutomation from "@/components/multicanal/MarketingAutomation";
 import ProcessAndStack from "@/components/multicanal/ProcessAndStack";
 import MulticanalFooter from "@/components/multicanal/MulticanalFooter";
-import MindMapMulticanal from "@/components/multicanal/Mindmap";
 import Tools from "@/components/Tools";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { useState } from "react";
+import GEO from "@/components/multicanal/geo";
 
 export default function MulticanalPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +71,7 @@ export default function MulticanalPage() {
             <ProcessAndStack />
           </section>
           <section id="funnel">
-            <MindMapMulticanal />
+            <GEO />
           </section>
           <section id="rendez-vous">
             <MulticanalFooter />

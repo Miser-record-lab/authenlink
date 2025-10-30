@@ -1,8 +1,8 @@
 // /data/navItemsAgents.ts
 
 export const navItemsAgents = [
-    { name: "Accueil", link: "/" },
-    { name: "Agents IA", link: "#agents-ia" },
-    { name: "Développement", link: "#developpement" }
-  ];
-  
+  { name: "Agents IA", link: "#agents-ia" },
+  { name: "Tech", link: "#developpement" },
+  { name: "Docs", link: "https://docs.authenlink.com" },
+  { name: "Blog", link: "https://blog.authenlink.com" },
+];
